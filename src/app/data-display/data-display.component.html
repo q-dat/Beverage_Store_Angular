@@ -1,19 +1,28 @@
 <div class="container">
-    <div class="grid md:grid-cols-3 2xl:grid-cols-4 gap-[50px] justify-center items-center
+    <div class="grid md:grid-cols-3 2xl:grid-cols-4 gap-[30px] justify-center items-center
     px-[20px] lg:px-[150px]
     ">
         @for (pr of data; track pr.id) {
-        <div class="relative border-solid border-gray-400 border-[1px] p-[1px] ">
-            <img src="{{pr.img}}" alt="{{pr.name}}">
-<div class="p-[10px] min-h-[100px]">
-            <p class="">Tên: {{pr.name}}</p>
-            <p class="">Giá: {{pr.price}}</p>
-        </div>
-            <div class="absolute inset-0 flex justify-center items-center flex-col 
-            opacity-0 hover:opacity-100 space-y-2
+        <div class="relative border-solid border-gray-400 p-[1px] ">
+            <img loading="lazy" src="{{pr.img}}" alt="{{pr.name}}">
+            <div class="p-[10px] min-h-[100px]">
+                <p class="">Tên: {{pr.name}}</p>
+                <p class="">Giá: {{pr.price}}</p>
+            </div>
+            <div class="absolute inset-0 flex justify-center items-center flex-row 
+            opacity-0 hover:opacity-100 space-x-1 hover:bg-white w-full hover:bg-opacity-30 
             ">
-                <button class="btn">Xem chi tiết</button>
-                <button class="btn bg-green-400 hover:bg-green-500">Thêm vào giỏi hàng</button>
+                <button class="btn bg-transparent border-red-500 rounded-full 
+                hover:bg-red-300 hover:text-white">
+                    <i class="fa fa-search"></i>
+                </button>
+                <button class="btn text-white bg-red-500
+                hover:text-red-600 hover:bg-white">Thêm vào giỏi hàng
+                </button>
+                <button class="btn bg-transparent border-red-500  rounded-full
+                hover:bg-red-300 hover:text-white">
+                    <i class="fa fa-heart "></i>
+                </button>
             </div>
         </div>
         }
