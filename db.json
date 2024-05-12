@@ -3,98 +3,114 @@
     {
       "id": 1,
       "name": "Coffee",
-     "price":1000,
+      "price": 50,
       "img": "https://bizweb.dktcdn.net/thumb/large/100/270/285/products/05-a41e0c7f-e4c9-4ad2-9412-1e8c4d79a028.jpg?v=1510561983257",
       "describe": "A classic cup of coffee brewed to perfection.",
-      "status": "1"
+      "status": 1,
+      "sale": {
+        "price": 39
+      }
     },
     {
       "id": 2,
       "name": "Orange Juice",
-     "price":1000,
+      "price": 50,
       "img": "https://bizweb.dktcdn.net/thumb/large/100/270/285/products/05-a41e0c7f-e4c9-4ad2-9412-1e8c4d79a028.jpg?v=1510561983257",
       "describe": "Freshly squeezed orange juice, packed with vitamins.",
-      "status": "1"
+      "status": 1,
+      "sale": {
+        "price": 39
+      }
     },
     {
       "id": 3,
       "name": "Mineral Water",
-     "price":1000,
+      "price": 50,
       "img": "https://bizweb.dktcdn.net/thumb/large/100/270/285/products/05-a41e0c7f-e4c9-4ad2-9412-1e8c4d79a028.jpg?v=1510561983257",
       "describe": "Pure and refreshing mineral water.",
-      "status": "1"
+      "status": 1,
+      "sale": {
+        "price": 39
+      }
     },
     {
       "id": 4,
       "name": "Bubble Tea",
-     "price":1000,
+      "price": 50,
       "img": "https://bizweb.dktcdn.net/thumb/large/100/270/285/products/05-a41e0c7f-e4c9-4ad2-9412-1e8c4d79a028.jpg?v=1510561983257",
       "describe": "A delightful combination of tea, milk, and tapioca pearls.",
-      "status": "1"
+      "status": 1,
+      "sale": {
+        "price": 39
+      }
     },
     {
       "id": 5,
       "name": "Avocado Smoothie",
-     "price":1000,
+      "price": 50,
       "img": "https://bizweb.dktcdn.net/thumb/large/100/270/285/products/05-a41e0c7f-e4c9-4ad2-9412-1e8c4d79a028.jpg?v=1510561983257",
       "describe": "Creamy and delicious smoothie made from fresh avocados.",
-      "status": "1"
+      "status": 1,
+      "sale": 1
     },
     {
       "id": 6,
       "name": "Lemon Soda",
-     "price":1000,
+      "price": 50,
       "img": "https://bizweb.dktcdn.net/thumb/large/100/270/285/products/05-a41e0c7f-e4c9-4ad2-9412-1e8c4d79a028.jpg?v=1510561983257",
       "describe": "Fizzing lemon soda, perfect for a hot day.",
-      "status": "1"
+      "status": 1,
+      "sale": 1
     },
     {
       "id": 7,
       "name": "Coconut Water",
-     "price":1000,
+      "price": 50,
       "img": "https://bizweb.dktcdn.net/thumb/large/100/270/285/products/05-a41e0c7f-e4c9-4ad2-9412-1e8c4d79a028.jpg?v=1510561983257",
       "describe": "Hydrating and nutritious coconut water straight from the coconut.",
-      "status": "1"
+      "status": 1,
+      "sale": 1
     },
     {
       "id": 8,
       "name": "Peach Tea",
-     "price":1000,
+      "price": 50,
       "img": "https://bizweb.dktcdn.net/thumb/large/100/270/285/products/05-a41e0c7f-e4c9-4ad2-9412-1e8c4d79a028.jpg?v=1510561983257",
       "describe": "Delicious tea infused with the flavor of ripe peaches.",
-      "status": "1"
+      "status": 1,
+      "sale": 1
     },
     {
       "id": 9,
       "name": "Hot Chocolate",
-     "price":1000,
+      "price": 50,
       "img": "https://bizweb.dktcdn.net/thumb/large/100/270/285/products/05-a41e0c7f-e4c9-4ad2-9412-1e8c4d79a028.jpg?v=1510561983257",
       "describe": "Rich and creamy hot chocolate topped with marshmallows.",
-      "status": "1"
+      "status": 1
     },
     {
       "id": 10,
       "name": "Pomegranate Juice",
-     "price":1000,
+      "price": 50,
       "img": "https://bizweb.dktcdn.net/thumb/large/100/270/285/products/05-a41e0c7f-e4c9-4ad2-9412-1e8c4d79a028.jpg?v=1510561983257",
       "describe": "Refreshing juice made from ripe pomegranates.",
-      "status": "1"
+      "status": 1
     },
     {
       "id": 11,
       "name": "Coconut Smoothie",
-     "price":1000,
+      "price": 50,
       "img": "https://bizweb.dktcdn.net/thumb/large/100/270/285/products/05-a41e0c7f-e4c9-4ad2-9412-1e8c4d79a028.jpg?v=1510561983257",
       "describe": "Smooth and velvety smoothie made from fresh coconut meat.",
-      "status": "1"
+      "status": 1
     },
     {
       "id": 12,
       "name": "Orange Juice (Freshly Squeezed)",
-     "price":1000,
+      "price": 50,
       "img": "https://bizweb.dktcdn.net/thumb/large/100/270/285/products/05-a41e0c7f-e4c9-4ad2-9412-1e8c4d79a028.jpg?v=1510561983257",
       "describe": "Zesty and tangy orange juice freshly squeezed from ripe oranges.",
-      "status": "1"
+      "status": 1
     }
   ]
 }

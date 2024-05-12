@@ -1,3 +1,8 @@
+<div class="text-center mt-[20px] md:m-5">
+    <img class="mx-auto" src="https://bizweb.dktcdn.net/100/270/285/themes/895115/assets/title_module.png?1665372569566"
+        alt="">
+    <h1 class="font-mono py-2 text-[1.3rem] md:text-[2rem]"> Đồ uống khuyến mãi </h1>
+</div>
 <div class="container">
     <div class="grid md:grid-cols-3 2xl:grid-cols-4  grid-cols-2  gap-[30px] justify-center items-center
     px-[20px] lg:px-[150px]
@@ -22,8 +27,59 @@
                         <i class="fa fa-search"></i>
                     </button>
                     <button class="btn text-white bg-red-500 
-                    hover:scale-[1.1] hover:text-red-600 hover:bg-white">Thêm
-                        vào giỏi hàng
+                    hover:scale-[1.1] hover:text-red-600 hover:bg-white">
+                        <i class="fa fa-cart-shopping"></i>Giỏ Hàng
+
+                    </button>
+                    <button class="btn bg-transparent border-red-500  
+                    rounded-full hover:scale-[1.2]  hover:bg-red-300 hover:text-white">
+                        <i class="fa fa-heart "></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        }
+    </div>
+</div>
+
+<!-- ------------------------------------------------------------------------------------------------------------------------------- -->
+<div class="text-center mt-[20px] md:m-5">
+    <img class="mx-auto" src="https://bizweb.dktcdn.net/100/270/285/themes/895115/assets/title_tab.png?1665372569566"
+        alt="">
+    <h1 class="font-mono py-2 text-[1.3rem] md:text-[2rem]"> Đồ uống giảm giá </h1>
+</div>
+<!-- ------------------------------------------------------------------------------------------------------------------------------- -->
+
+<div class="container">
+    <div class="grid md:grid-cols-3 2xl:grid-cols-4  grid-cols-2  gap-[30px] justify-center items-center
+    px-[20px] lg:px-[150px]
+    ">
+        @for (pr of sale; track pr.id) {
+        <div class="relative border-solid border-gray-400 p-[1px] ">
+            <a href="/">
+                <img class="rounded-[10px] md:w-[300px] md:h-[300px] object-cover " loading="lazy" src="{{pr.img}}"
+                    alt="{{pr.name}}"></a>
+            <div class="p-[10px] min-h-[100px]">
+                <p class>Tên: {{pr.name}}</p>
+                <div class="space-x-2">
+                    <span class>Giá: {{pr.price}} .000đ</span>
+                    <del class="text-red-500"> {{pr.sale['price']}} .000đ</del>
+                </div>
+            </div>
+            <div class=" hidden 
+            absolute inset-0 xl:flex justify-center items-center flex-row 
+          transform transition ease-in-out duration-1000  rounded-[10px]  
+            opacity-0 hover:opacity-100 hover:bg-white w-full hover:bg-opacity-30 
+            ">
+                <div class=" space-x-2">
+                    <button class="btn bg-transparent border-red-500 
+                    rounded-full hover:scale-[1.2] hover:bg-red-300 hover:text-white">
+                        <i class="fa fa-search"></i>
+                    </button>
+                    <button class="btn text-white bg-red-500 
+                    hover:scale-[1.1] hover:text-red-600 hover:bg-white">
+                        <i class="fa fa-cart-shopping"></i>Giỏ Hàng
+
                     </button>
                     <button class="btn bg-transparent border-red-500  
                     rounded-full hover:scale-[1.2]  hover:bg-red-300 hover:text-white">
