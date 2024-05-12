@@ -1,6 +1,21 @@
-<div>Sản Phẩm</div>
-<ul>
-    @for (pr of data; track pr.id) {
-    <li>{{pr.id}}</li>
-    }
-</ul>
+<div class="container">
+    <div class="grid md:grid-cols-3 2xl:grid-cols-4 gap-[50px] justify-center items-center
+    px-[20px] lg:px-[150px]
+    ">
+        @for (pr of data; track pr.id) {
+        <div class="relative border-solid border-gray-400 border-[1px] p-[1px] ">
+            <img src="{{pr.img}}" alt="{{pr.name}}">
+<div class="p-[10px]">
+            <p class="">Tên: {{pr.name}}</p>
+            <p class="">Giá: {{pr.price}}</p>
+        </div>
+            <div class="absolute inset-0 flex justify-center items-center flex-col 
+            opacity-0 hover:opacity-100 space-y-2
+            ">
+                <button class="btn">Xem chi tiết</button>
+                <button class="btn bg-green-400 hover:bg-green-500">Thêm vào giỏi hàng</button>
+            </div>
+        </div>
+        }
+    </div>
+</div>

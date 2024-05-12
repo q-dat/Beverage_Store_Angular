@@ -17,7 +17,7 @@ export class DataDisplayComponent implements OnInit {
   }
   fetchData() {
     this.product
-    .get('https://jsonplaceholder.typicode.com/posts')
+    .get('http://localhost:3000/listproducts')
       .subscribe((data: any) => {
         this.data = data;
         console.log(data);
