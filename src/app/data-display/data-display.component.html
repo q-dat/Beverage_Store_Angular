@@ -59,11 +59,17 @@
             <a href="/">
                 <img class="rounded-[10px] md:w-[300px] md:h-[300px] object-cover " loading="lazy" src="{{pr.img}}"
                     alt="{{pr.name}}"></a>
-            <div class="p-[10px] min-h-[100px]">
+            <div class="p-[10px] md:min-h-[100px] min-h-[140px]">
                 <p class>Tên: {{pr.name}}</p>
-                <div class="space-x-2">
+                <div class="hidden md:block md:space-x-2 ">
                     <span class>Giá: {{pr.price}} .000đ</span>
-                    <del class="text-red-500"> {{pr.sale['price']}} .000đ</del>
+                    <del class="text-red-500 "> {{pr.sale['price']}} .000đ</del>
+                </div>
+                <div class="md:hidden ">
+                    <p class>Giá: {{pr.price}} .000đ</p>
+                    <p>Còn:
+                        <del class="text-red-500 ">{{pr.sale['price']}} .000đ</del>
+                    </p>
                 </div>
             </div>
             <div class=" hidden 

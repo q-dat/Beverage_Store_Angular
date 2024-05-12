@@ -9,6 +9,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
   templateUrl: './data-display.component.html',
   styleUrl: './data-display.component.css'
 })
+
 export class DataDisplayComponent implements OnInit {
   product = inject(HttpClient)
   data: any[] = []

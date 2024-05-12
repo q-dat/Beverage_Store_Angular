@@ -6,7 +6,6 @@ import { DataDisplayComponent } from '../../data-display/data-display.component'
   standalone: true,
   imports: [DataDisplayComponent],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
 })
 export class HomeComponent {
 
