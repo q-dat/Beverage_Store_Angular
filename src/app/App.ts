@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Product } from './data/product';
+import { DataDisplayComponent } from './data-display/data-display.component';
+
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet,DataDisplayComponent],
   templateUrl: './App.html',
 })
 
