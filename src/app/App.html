@@ -8,17 +8,28 @@
 </head>
 
 <body>
-
   <div class="navbar  py-5 px-[10px] lg:px-20">
     <div class="navbar-start">
       <div class="dropdown flex">
-        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden pl-0 md:pl-4">
-          <svg xmlns="https://bizweb.dktcdn.net/100/270/285/themes/895115/assets/logo.png?1676358260059" class="h-5 w-5"
-            fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+        <!-- ------------------------------------------------------------------------------------------------------------------------------- -->
+        <!-- Swap -->
+        <label class="btn btn-circle swap swap-rotate">
+          <!-- this hidden checkbox controls the state -->
+          <input type="checkbox" />
+          <!-- hamburger icon -->
+          <svg class="swap-off fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+            viewBox="0 0 512 512">
+            <path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z" />
           </svg>
-        </div>
-        <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+          <!-- close icon -->
+          <svg class="swap-on fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+            viewBox="0 0 512 512">
+            <polygon
+              points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49" />
+          </svg>
+        </label>
+        <!-- ------------------------------------------------------------------------------------------------------------------------------- -->
+        <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-5 shadow bg-base-100 rounded-box  w-52">
           <li><a href="/">Trang Chủ</a></li>
           <li>
             <a href="/shop">Sản Phẩm</a>
@@ -73,8 +84,10 @@
     </div>
   </div>
   <!-- Body -->
+  <!-- ------------------------------------------------------------------------------------------------------------------------------- -->
   <router-outlet></router-outlet>
   <!-- Footer> -->
+  <!-- ------------------------------------------------------------------------------------------------------------------------------- -->
   <footer
     class="footer xl:pb-20 pb-[300px] sm:pb-[700px]  pt-[20px] mt-[20px] lg:px-20  px-[40px] bg-base-200 text-base-content">
     <nav>
