@@ -14,7 +14,7 @@
                     alt="{{pr.name}}"></a>
             <div class="p-[10px] min-h-[100px]">
                 <p class>Tên: {{pr.name}}</p>
-                <p class>Giá: {{pr.price}}</p>
+                <p class>Giá: {{pr.price}}.000đ</p>
             </div>
             <div class=" hidden 
             absolute inset-0 xl:flex justify-center items-center flex-row 
@@ -22,19 +22,19 @@
             opacity-0 hover:opacity-100 hover:bg-white w-full hover:bg-opacity-30 
             ">
                 <div class=" space-x-2">
-                    <button class="btn bg-transparent border-red-500 
+                    <a href="/detail"> <button class="btn bg-transparent border-red-500 
                     rounded-full hover:scale-[1.2] hover:bg-red-300 hover:text-white">
-                        <a href="/detail"> <i class="fa fa-search"></i></a>
-                    </button>
+                            <i class="fa fa-search"></i>
+                        </button></a>
                     <button class="btn text-white bg-red-500 
                     hover:scale-[1.1] hover:text-red-600 hover:bg-white">
                         <i class="fa fa-cart-shopping"></i>Giỏ Hàng
 
                     </button>
-                    <button class="btn bg-transparent border-red-500  
+                    <a href="/"> <button class="btn bg-transparent border-red-500  
                     rounded-full hover:scale-[1.2]  hover:bg-red-300 hover:text-white">
-                        <a href="/"> <i class="fa fa-heart "></i> </a>
-                    </button>
+                            <i class="fa fa-heart "></i>
+                        </button> </a>
                 </div>
             </div>
         </div>
@@ -63,12 +63,12 @@
                 <p class>Tên: {{pr.name}}</p>
                 <div class="hidden md:block md:space-x-2 ">
                     <span class>Giá: {{pr.price}} .000đ</span>
-                    <del class="text-red-500 "> {{pr.sale['price']}} .000đ</del>
+                    <del class="text-red-500 "> {{pr.sale['price']}}.000đ</del>
                 </div>
                 <div class="md:hidden ">
                     <p class>Giá: {{pr.price}} .000đ</p>
                     <p>Còn:
-                        <del class="text-red-500 ">{{pr.sale['price']}} .000đ</del>
+                        <del class="text-red-500 ">{{pr.sale['price']}}.000đ</del>
                     </p>
                 </div>
             </div>
@@ -78,19 +78,19 @@
             opacity-0 hover:opacity-100 hover:bg-white w-full hover:bg-opacity-30 
             ">
                 <div class=" space-x-2">
-                    <button class="btn bg-transparent border-red-500 
+                    <a href="/detail"> <button class="btn bg-transparent border-red-500 
                 rounded-full hover:scale-[1.2] hover:bg-red-300 hover:text-white">
-                        <a href="/detail"> <i class="fa fa-search"></i></a>
-                    </button>
+                            <i class="fa fa-search"></i>
+                        </button></a>
                     <button class="btn text-white bg-red-500 
                 hover:scale-[1.1] hover:text-red-600 hover:bg-white">
                         <i class="fa fa-cart-shopping"></i>Giỏ Hàng
 
                     </button>
-                    <button class="btn bg-transparent border-red-500  
+                    <a href="/"> <button class="btn bg-transparent border-red-500  
                 rounded-full hover:scale-[1.2]  hover:bg-red-300 hover:text-white">
-                        <a href="/"> <i class="fa fa-heart "></i> </a>
-                    </button>
+                            <i class="fa fa-heart "></i>
+                        </button> </a>
                 </div>
             </div>
         </div>
