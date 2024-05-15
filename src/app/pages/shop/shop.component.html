@@ -5,47 +5,72 @@
     </ul>
 </div>
 <!-- ------------------------------------------------------------------------------------------------------- -->
+<div class="hidden md:flex flex-col w-[500px] pb-5 pl-[20px] lg:pl-[150px] xl:pl-[150px]">
+    <h1 class="font-semibold text-[20px] my-5 border-black  border-b-[1px] w-[200px]">Danh Mục Sản Phẩm:</h1>
+    <ul class="flex justify-start items-center space-x-5 ">
+        <li class="btn"><a href="">Trà Truyền Thống</a></li>
+        <li class="btn"><a href="">Trà Sữa Trái Cây</a></li>
+        <li class="btn"><a href="">Trà Sữa Đài Loan</a></li>
+        <li class="btn"><a href="">Nước Trái Cây</a></li>
+        <li class="btn"><a href=""></a>Đồ Uống Nóng</li>
+    </ul>
+</div>
 
-<section class="z-50 grid md:grid-cols-3 2xl:grid-cols-4  grid-cols-2 md:gap-[30px] gap-[10px] justify-center items-center
+
+<details class="md:hidden ml-[20px]
+font-semibold my-5">
+    <summary class=" border-black  border-b-[1px]  w-[170px]">Danh Mục Sản Phẩm</summary>
+    <ul class="grid grid-cols-2  space-x-5 ">
+        <li class="btn"><a href="">Trà Truyền Thống</a></li>
+        <li class="btn"><a href="">Trà Sữa Trái Cây</a></li>
+        <li class="btn"><a href="">Trà Sữa Đài Loan</a></li>
+        <li class="btn"><a href="">Nước Trái Cây</a></li>
+        <li class="btn"><a href=""></a>Đồ Uống Nóng</li>
+    </ul>
+</details>
+<div >
+    <section class="z-0 grid md:grid-cols-3 2xl:grid-cols-4 2xl:px-[150px]  grid-cols-2 md:gap-[30px] gap-[10px] justify-center items-center
 px-[20px] lg:px-[150px]
 ">
-    @for (pr of data; track pr.id) {
-    <div class="relative border-solid border-gray-400 p-[1px] ">
-        <a href="/detail">
-            <img class="rounded-[10px] md:w-[300px] md:h-[300px] object-cover " loading="lazy" src="{{pr.img}}"
-                alt="{{pr.name}}"></a>
 
-        <div class="flex justify-between items-start flex-row">
-            <div class="p-[10px] min-h-[100px]">
-                <p>{{pr.name}}</p>
-                <p>Giá: {{pr.price}}.000đ</p>
+        @for (pr of data; track pr.id) {
+        <div class="relative border-solid border-gray-400 p-[1px] ">
+            <a href="/detail">
+                <img class="rounded-[10px] md:w-[300px] md:h-[300px] object-cover " loading="lazy" src="{{pr.img}}"
+                    alt="{{pr.name}}"></a>
+
+            <div class="flex justify-between items-start flex-row">
+                <div class="p-[10px] min-h-[100px]">
+                    <p>{{pr.name}}</p>
+                    <p>Giá: {{pr.price}}.000đ</p>
+                </div>
+                <div class="my-[10px]">
+                    <button class=" btn xl:hidden glass bg-red-600 text-white">+</button>
+                </div>
             </div>
-            <div class="my-[10px]">
-                <button class=" btn xl:hidden glass bg-red-600 text-white">+</button>
-            </div>
-        </div>
-        <div class=" hidden 
+            <div class=" hidden 
         absolute inset-0 xl:flex justify-center items-center flex-row 
       transform transition ease-in-out duration-1000  rounded-[10px]  
         opacity-0 hover:opacity-100 hover:bg-white w-full hover:bg-opacity-30 
         ">
-            <div class=" space-x-2">
-                <a href="/detail"> <button class="btn bg-transparent border-red-500 
+                <div class=" space-x-2">
+                    <a href="/detail"> <button class="btn bg-transparent border-red-500 
                 rounded-full hover:scale-[1.2] hover:glass hover:bg-red-700 hover:text-white">
-                        <i class="fa fa-search"></i>
-                    </button></a>
-                <button
-                    class="btn text-white bg-red-600 glass 
+                            <i class="fa fa-search"></i>
+                        </button></a>
+                    <button
+                        class="btn text-white bg-red-600 glass 
                 hover:scale-[1.1] hover:text-red-600 hover:bg-white hover:border-solid hover:border-red-500 hover:border-[1px]">
-                    <i class="fa fa-cart-shopping "></i>Giỏ Hàng
+                        <i class="fa fa-cart-shopping "></i>Giỏ Hàng
 
-                </button>
-                <a href="/"> <button class="btn bg-transparent border-red-500  
+                    </button>
+                    <a href="/"> <button class="btn bg-transparent border-red-500  
                 rounded-full hover:scale-[1.2] hover:glass hover:bg-red-700 hover:text-white">
-                        <i class="fa fa-heart "></i>
-                    </button> </a>
+                            <i class="fa fa-heart "></i>
+                        </button> </a>
+                </div>
             </div>
         </div>
-    </div>
-    }
-</section>
+        }
+    </section>
+</div>
