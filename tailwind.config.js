@@ -20,4 +20,3 @@ module.exports = {
     themes: ["retro" ],
   },
 }
-

@@ -7,7 +7,7 @@
         alt="">
     <h1 class="font-mono py-2 text-[1.3rem] md:text-[2rem]"> Đồ uống khuyến mãi </h1>
 </div>
-<div class="container">
+<div>
     <div class="grid md:grid-cols-3 2xl:grid-cols-4  grid-cols-2 md:gap-[30px] gap-[10px] justify-center items-center
     px-[20px] lg:px-[150px]
     ">
@@ -52,7 +52,15 @@
         }
     </div>
 </div>
+<!-- ------------------------------------------------------------------------------------------------------------------------------- -->
+<div class="flex justify-center items-center flex-col space-y-[10px] md:space-y-0 md:flex-row md:space-x-[20px] lg:space-x-[30px] my-5 px-[20px]
 
+">
+    <img class="hover:opacity-50 cursor-pointer lg:w-[330px] md:w-[350px] xl:w-[595px] object-cover "
+        src="https://bizweb.dktcdn.net/100/270/285/themes/895115/assets/banner_1.jpg?1676358260059" alt="">
+    <img class="hover:opacity-50 cursor-pointer  lg:w-[330px]  md:w-[350px] xl:w-[595px] object-cover"
+        src="https://bizweb.dktcdn.net/100/270/285/themes/895115/assets/banner_2.jpg?1676358260059" alt="">
+</div>
 <!-- ------------------------------------------------------------------------------------------------------------------------------- -->
 <div class="text-center mt-[20px] md:m-5">
     <img class="mx-auto" src="https://bizweb.dktcdn.net/100/270/285/themes/895115/assets/title_tab.png?1665372569566"
@@ -61,7 +69,7 @@
 </div>
 <!-- ------------------------------------------------------------------------------------------------------------------------------- -->
 
-<div class="container">
+<div>
     <div class="grid md:grid-cols-3 2xl:grid-cols-4  grid-cols-2  md:gap-[30px] gap-[10px] justify-center items-center
     px-[20px] lg:px-[150px]
     ">
@@ -71,28 +79,28 @@
                 <img class="rounded-[10px] md:w-[300px] md:h-[300px] object-cover " loading="lazy" src="{{pr.img}}"
                     alt="{{pr.name}}"></a>
 
-                   
-                    
 
-                    <div class="flex justify-between items-start flex-row">
-                        <div class="p-[10px] min-h-[100px]">
-                            <p>{{pr.name}}</p>
-                            <div class="hidden xl:block md:space-x-2 ">
-                                <span class>Giá: {{pr.price}} .000đ</span>
-                                <del class="text-red-500 "> {{pr.sale['price']}}.000đ</del>
-                            </div>
-                     
-                        <div class="xl:hidden ">
-                            <p>Giá: {{pr.price}} .000đ</p>
-                            <p>Còn:
-                                <del class="text-red-500 ">{{pr.sale['price']}}.000đ</del>
-                            </p>
-                        </div>
-                           </div>
-                        <div class="my-[10px]">
-                            <button class=" btn xl:hidden glass bg-red-600 text-white">+</button>
-                        </div>
+
+
+            <div class="flex justify-between items-start flex-row">
+                <div class="p-[10px] min-h-[100px]">
+                    <p>{{pr.name}}</p>
+                    <div class="hidden xl:block md:space-x-2 ">
+                        <span class>Giá: {{pr.price}} .000đ</span>
+                        <del class="text-red-500 "> {{pr.sale['price']}}.000đ</del>
                     </div>
+
+                    <div class="xl:hidden ">
+                        <p>Giá: {{pr.price}} .000đ</p>
+                        <p>Còn:
+                            <del class="text-red-500 ">{{pr.sale['price']}}.000đ</del>
+                        </p>
+                    </div>
+                </div>
+                <div class="my-[10px]">
+                    <button class=" btn xl:hidden glass bg-red-600 text-white">+</button>
+                </div>
+            </div>
 
 
             <div class=" hidden 
