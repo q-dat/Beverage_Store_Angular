@@ -9,6 +9,10 @@ import { Component, inject } from '@angular/core';
   styleUrl: './shop.component.css'
 })
 export class ShopComponent {
+pageChangeEvent($event: Event) {
+throw new Error('Method not implemented.');
+}
+  
   product = inject(HttpClient)
   data: any[] = []
   ngOnInit(): void {
