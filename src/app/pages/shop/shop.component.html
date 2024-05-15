@@ -1,1 +1,44 @@
-<p>shop works!</p>
+<div class="grid md:grid-cols-3 2xl:grid-cols-4  grid-cols-2 md:gap-[30px] gap-[10px] justify-center items-center
+px-[20px] lg:px-[150px]
+">
+    @for (pr of data; track pr.id) {
+    <div class="relative border-solid border-gray-400 p-[1px] ">
+        <a href="/detail">
+            <img class="rounded-[10px] md:w-[300px] md:h-[300px] object-cover " loading="lazy" src="{{pr.img}}"
+                alt="{{pr.name}}"></a>
+
+        <div class="flex justify-between items-start flex-row">
+            <div class="p-[10px] min-h-[100px]">
+                <p>{{pr.name}}</p>
+                <p>Giá: {{pr.price}}.000đ</p>
+            </div>
+            <div class="my-[10px]">
+                <button class=" btn xl:hidden glass bg-red-600 text-white">+</button>
+            </div>
+        </div>
+        <div class=" hidden 
+        absolute inset-0 xl:flex justify-center items-center flex-row 
+      transform transition ease-in-out duration-1000  rounded-[10px]  
+        opacity-0 hover:opacity-100 hover:bg-white w-full hover:bg-opacity-30 
+        ">
+            <div class=" space-x-2">
+                <a href="/detail"> <button class="btn bg-transparent border-red-500 
+                rounded-full hover:scale-[1.2] hover:glass hover:bg-red-700 hover:text-white">
+                        <i class="fa fa-search"></i>
+                    </button></a>
+                <button
+                    class="btn text-white bg-red-600 glass 
+                hover:scale-[1.1] hover:text-red-600 hover:bg-white hover:border-solid hover:border-red-500 hover:border-[1px]">
+                    <i class="fa fa-cart-shopping "></i>Giỏ Hàng
+
+                </button>
+                <a href="/"> <button class="btn bg-transparent border-red-500  
+                rounded-full hover:scale-[1.2] hover:glass hover:bg-red-700 hover:text-white">
+                        <i class="fa fa-heart "></i>
+                    </button> </a>
+            </div>
+        </div>
+    </div>
+    }
+</div>
+
