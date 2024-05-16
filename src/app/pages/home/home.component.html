@@ -3,8 +3,7 @@
 </div>
 <!-- ------------------------------------------------------------------------------------------------------------------------------- -->
 <div class="text-center mt-[20px] md:m-5">
-    <img class="mx-auto" src="../../../assets/image/title_module.webp"
-        alt="">
+    <img class="mx-auto" src="../../../assets/image/title_module.webp" alt="">
     <h1 class="font-mono py-2 text-[1.3rem] md:text-[2rem]"> Đồ uống ưa thích</h1>
 </div>
 <section>
@@ -63,8 +62,7 @@
 </div>
 <!-- ------------------------------------------------------------------------------------------------------------------------------- -->
 <div class="text-center mt-[20px] md:m-5">
-    <img class="mx-auto" src="../../../assets/image/title_tab.webp"
-        alt="">
+    <img class="mx-auto" src="../../../assets/image/title_tab.webp" alt="">
     <h1 class="font-mono py-2 text-[1.3rem] md:text-[2rem]"> Đồ uống giảm giá </h1>
 </div>
 <!-- ------------------------------------------------------------------------------------------------------------------------------- -->
@@ -125,6 +123,27 @@
                         </button> </a>
                 </div>
             </div>
+        </div>
+        }
+    </div>
+</section>
+<!-- ------------------------------------------------------------------------------------------------------------------------------- -->
+<div class="text-center mt-[20px] md:m-5">
+    <img class="mx-auto" src="../../../assets/image/title_tab.webp" alt="">
+    <h1 class="font-mono py-2 text-[1.3rem] md:text-[2rem]"> Đồ uống đặc biệt </h1>
+</div>
+<!-- ------------------------------------------------------------------------------------------------------------------------------- -->
+<section class="bg-menu bg-repeat min-h-[350px]">
+    <div class=" grid md:grid-cols-3 2xl:grid-cols-3  grid-cols-2 md:gap-[20px] gap-[10px]
+     px-[20px] lg:px-[150px] py-[20px]
+    ">
+        @for (pr of data; track pr.id) {
+        <div class=" flex space-x-[10px] justify-start">
+            <img class="w-[60px] h-[60px] object-cover rounded-full " src="{{pr.img}}" alt="">
+            <ul class="">
+                <li class="text-white font-semibold"><a href="">{{pr.name}}</a></li>
+                <li class="text-gray-200 font-light">{{pr.price}}.000đ</li>
+            </ul>
         </div>
         }
     </div>

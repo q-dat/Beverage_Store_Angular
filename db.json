@@ -2,7 +2,7 @@
   "listproducts": [
     {
       "id": 1,
-      "name": "Coffee",
+      "name": "Coffee" ,
       "price": 50,
       "img": "https://bizweb.dktcdn.net/thumb/large/100/270/285/products/05-a41e0c7f-e4c9-4ad2-9412-1e8c4d79a028.jpg?v=1510561983257",
       "describe": "A classic cup of coffee brewed to perfection.",
@@ -13,7 +13,7 @@
     },
     {
       "id": 2,
-      "name": "Orange Juice",
+      "name": "Orange Juice ",
       "price": 50,
       "img": "https://bizweb.dktcdn.net/thumb/large/100/270/285/products/05-a41e0c7f-e4c9-4ad2-9412-1e8c4d79a028.jpg?v=1510561983257",
       "describe": "Freshly squeezed orange juice, packed with vitamins.",
