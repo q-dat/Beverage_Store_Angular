@@ -17,8 +17,8 @@
                     alt="{{pr.name}}"></a>
 
             <div class="flex justify-between items-start flex-row">
-                <div class="my-[10px] pl-[10px] min-h-[100px]">
-                    <p>{{pr.name}}</p>
+                <div class="my-[10px] pl-[10px] min-h-[100px] font-serif">
+                    <p class=" font-semibold">{{pr.name}}</p>
                     <p>Giá: {{pr.price}}.000đ</p>
                 </div>
                 <div class="my-[10px] pr-[10px]">
@@ -81,21 +81,21 @@
 
 
             <div class="flex justify-between items-start flex-row">
-                <div class="my-[10px] pl-[10px] min-h-[100px]">
-                    <p>{{pr.name}}</p>
+                <div class="my-[10px] pl-[10px] min-h-[100px] font-serif">
+                    <p class=" font-semibold">{{pr.name}}</p>
                     <div class="hidden xl:block md:space-x-2 ">
-                        <span class>Giá: {{pr.price}} .000đ</span>
-                        <del class="text-red-500 "> {{pr.sale['price']}}.000đ</del>
+                        <span class>Giá: {{pr.sale['price']}} .000đ</span>
+                        <del class="text-red-500 "> {{pr.price}}.000đ</del>
                     </div>
 
                     <div class="xl:hidden ">
-                        <p>Giá: {{pr.price}} .000đ</p>
-                        <p>Còn:
-                            <del class="text-red-500 ">{{pr.sale['price']}}.000đ</del>
+                        <p>Giá:
+                            <del class="text-red-500 ">{{pr.price}}.000đ</del>
                         </p>
+                        <p>Còn:{{pr.sale['price']}} .000đ</p>
                     </div>
                 </div>
-                <div class="my-[10px] pr-[10px]">
+                <div class="my-[10px] pr-[10px] ">
                     <button class=" btn xl:hidden glass bg-red-600 text-white">+</button>
                 </div>
             </div>
@@ -140,9 +140,9 @@
         @for (pr of data; track pr.id) {
         <div class=" flex space-x-[10px] justify-start">
             <img class="w-[60px] h-[60px] object-cover rounded-full " src="{{pr.img}}" alt="">
-            <ul class="">
-                <li class="text-white font-semibold"><a href="">{{pr.name}}</a></li>
-                <li class="text-gray-200 font-light">{{pr.price}}.000đ</li>
+            <ul class="font-serif">
+                <li class="text-white font-semibold "><a href="">{{pr.name}}</a></li>
+                <li class="text-gray-200 font-light ">{{pr.price}}.000đ</li>
             </ul>
         </div>
         }
