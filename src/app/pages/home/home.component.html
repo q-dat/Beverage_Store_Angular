@@ -7,21 +7,21 @@
     <h1 class="font-mono py-2 text-[1.3rem] md:text-[2rem]"> Đồ uống ưa thích</h1>
 </div>
 <section>
-    <div class="grid md:grid-cols-3 2xl:grid-cols-4  grid-cols-2 md:gap-[30px] gap-[10px] justify-center items-center
-    px-[20px] lg:px-[150px]
+    <div class="grid md:grid-cols-3 2xl:grid-cols-4  grid-cols-2 md:gap-[10px] gap-[10px] justify-center items-center
+     px-[20px] lg:px-[150px]
     ">
         @for (pr of data; track pr.id) {
-        <div class="relative border-solid border-gray-400 p-[1px] ">
+        <div class="relative border-gray-300 border-[1px] rounded-[10px]">
             <a href="/detail">
-                <img class="rounded-[10px] md:w-[300px] md:h-[300px] object-cover " loading="lazy" src="{{pr.img}}"
+                <img class="rounded-[10px] md:w-[350px] md:h-[350px] object-cover " loading="lazy" src="{{pr.img}}"
                     alt="{{pr.name}}"></a>
 
             <div class="flex justify-between items-start flex-row">
-                <div class="p-[10px] min-h-[100px]">
+                <div class="my-[10px] pl-[10px] min-h-[100px]">
                     <p>{{pr.name}}</p>
                     <p>Giá: {{pr.price}}.000đ</p>
                 </div>
-                <div class="my-[10px]">
+                <div class="my-[10px] pr-[10px]">
                     <button class=" btn xl:hidden glass bg-red-600 text-white">+</button>
                 </div>
             </div>
@@ -52,12 +52,12 @@
     </div>
 </section>
 <!-- ------------------------------------------------------------------------------------------------------------------------------- -->
-<div class="flex justify-center items-center flex-col space-y-[10px] md:space-y-0 md:flex-row md:space-x-[20px] lg:space-x-[30px] my-5 px-[20px]
+<div class="flex justify-center items-center flex-col space-y-[10px] md:space-y-0 md:flex-row md:space-x-[20px] lg:space-x-[10px] my-5 px-[20px]
 
 ">
-    <img class="hover:opacity-50 cursor-pointer lg:w-[330px] md:w-[350px] xl:w-[595px] object-cover "
+    <img class="hover:opacity-50 cursor-pointer lg:w-[350px] md:w-[350px] xl:w-[605px] object-cover "
         src="../../../assets/image/banner_1.webp" alt="">
-    <img class="hover:opacity-50 cursor-pointer  lg:w-[330px]  md:w-[350px] xl:w-[595px] object-cover"
+    <img class="hover:opacity-50 cursor-pointer  lg:w-[330px]  md:w-[350px] xl:w-[605px] object-cover"
         src="../../../assets/image/banner_2.webp" alt="">
 </div>
 <!-- ------------------------------------------------------------------------------------------------------------------------------- -->
@@ -68,20 +68,20 @@
 <!-- ------------------------------------------------------------------------------------------------------------------------------- -->
 
 <section>
-    <div class="grid md:grid-cols-3 2xl:grid-cols-4  grid-cols-2  md:gap-[30px] gap-[10px] justify-center items-center
+    <div class="grid md:grid-cols-3 2xl:grid-cols-4  grid-cols-2  md:gap-[10px] gap-[10px] justify-center items-center
     px-[20px] lg:px-[150px]
     ">
         @for (pr of sale; track pr.id) {
-        <div class="relative border-solid border-gray-400 p-[1px] ">
+        <div class="relative border-gray-300 border-[1px] rounded-[10px]">
             <a href="/detail">
-                <img class="rounded-[10px] md:w-[300px] md:h-[300px] object-cover " loading="lazy" src="{{pr.img}}"
+                <img class="rounded-[10px] md:w-[350px] md:h-[350px] object-cover " loading="lazy" src="{{pr.img}}"
                     alt="{{pr.name}}"></a>
 
 
 
 
             <div class="flex justify-between items-start flex-row">
-                <div class="p-[10px] min-h-[100px]">
+                <div class="my-[10px] pl-[10px] min-h-[100px]">
                     <p>{{pr.name}}</p>
                     <div class="hidden xl:block md:space-x-2 ">
                         <span class>Giá: {{pr.price}} .000đ</span>
@@ -95,7 +95,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="my-[10px]">
+                <div class="my-[10px] pr-[10px]">
                     <button class=" btn xl:hidden glass bg-red-600 text-white">+</button>
                 </div>
             </div>

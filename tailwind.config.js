@@ -21,6 +21,6 @@ module.exports = {
     require('daisyui'),
     require('tailwind-scrollbar-hide')
   ], daisyui: {
-    themes: ["retro" ],
+    themes: ["retro"],
   },
 }
