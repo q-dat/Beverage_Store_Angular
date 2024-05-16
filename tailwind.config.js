@@ -17,15 +17,22 @@ module.exports = {
       }
     },
     colors: {
+      'white': '#ffffff',
       'main': '#ece3ca',
-      'red':'red',
+      'transparent': 'transparent',
+      'red': 'red',
+      'gray-200': '#e5e7eb',
+      'gray-300': '#cbd5e1',
+      'red-500': '#ef4444',
+      'red-600': '#dc2626',
+      'red-700': '#b91c1c',
     }
   },
   plugins: [
     require('daisyui'),
     require('tailwind-scrollbar-hide')
   ],
-   daisyui: {
+  daisyui: {
     themes: ["light"],
   },
 }
