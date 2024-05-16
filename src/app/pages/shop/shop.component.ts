@@ -4,7 +4,7 @@ import { Component, inject } from '@angular/core';
 @Component({
   selector: 'app-shop',
   standalone: true,
-  imports: [HttpClientModule],
+  imports: [HttpClientModule,],
   templateUrl: './shop.component.html',
   styleUrl: './shop.component.css'
 })
