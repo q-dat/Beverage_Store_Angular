@@ -16,11 +16,16 @@ module.exports = {
         'menu': "url('https://static.vecteezy.com/system/resources/previews/009/344/914/original/food-seamless-pattern-cuisine-fast-food-cafe-wallpaper-with-gastronomy-icons-red-ruby-color-texture-decorative-textile-wrapping-paper-design-bright-background-for-menu-receipts-vector.jpg')",
       }
     },
+    colors: {
+      'main': '#ece3ca',
+      'red':'red',
+    }
   },
   plugins: [
     require('daisyui'),
     require('tailwind-scrollbar-hide')
-  ], daisyui: {
-    themes: ["retro"],
+  ],
+   daisyui: {
+    themes: ["light"],
   },
 }
