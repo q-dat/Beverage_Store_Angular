@@ -1,0 +1,100 @@
+{
+  "Products": [
+    {
+      "id": 1,
+      "id_catalog": 1,
+      "name": "Sinh tố dâu tây",
+      "img": "sinh-to-dau-tay.webp",
+      "img_child": "",
+      "price": 55,
+      "sale": 42,
+      "status": 1,
+      "views": 100,
+      "description": "Nếu như bạn đang khổ tâm vì quầng thâm, dâu tây sẽ rất có ích bởi chúng có khả năng chống viêm và làm sáng da. Thêm vào đó, vitamin C trong dâu tây hạn chế các bệnh về mắt như đục thủy tinh thể.\r\n\r\nChất chống oxy hóa và kháng viêm trong dâu tây chống lại sự tăng sinh các khối u và ngăn khối u không lan rộng.\r\n\r\nTrầm cảm hình thành từ những cảm xúc tiêu cực. Và bạn có thể chống lại chứng bệnh này bằng các nguyên liệu tự nhiên. Khi cảm thấy buồn rầu, hãy ăn dâu tây. Thành phần trong dâu tây hỗ trợ máu mang dưỡng chất đến não, chống lại sự hình thành homocysteine và làm tăng các hormone hạnh phúc như dopamine và serotonin; giúp bạn tươi tỉnh trở lại."
+    },
+    {
+      "id": 2,
+      "id_catalog": 1,
+      "name": "Trà xanh bưởi",
+      "img": "tra-xanh-buoi.webp",
+      "img_child": "",
+      "price": 29,
+      "sale": 37,
+      "status": 1,
+      "views": 100,
+      "description": "Trong bưởi có rất nhiều vitamin C, chất xơ và nước, bưởi rất tốt cho những người đang cố gắng giảm cân. Các chất xơ và nước trong bưởi thậm chí còn hỗ trợ trong việc làm giảm cơn đói. Quả này cũng có thể giúp hấp thụ, làm giảm tinh bột và đường trong cơ thể\r\n\r\nbưởi giàu axit salicylic nên nó có thể làm giảm đau do viêm khớp.\r\n\r\nbưởi hỗ trợ giải độc gan, làm sạch chất độc trong cơ thể. Glutathione, một chất chống oxy hóa mạnh, trung hòa các gốc tự do và giúp trong việc giải độc kim loại nặng từ gan."
+    },
+    {
+      "id": 3,
+      "id_catalog": 1,
+      "name": "Sinh tố xoài aloha",
+      "img": "sinh-to-xoai-aloha",
+      "img_child": "",
+      "price": 34,
+      "sale": 49,
+      "status": 1,
+      "views": 100,
+      "description": "Một cốc sinh tố xoài chứa tỷ lệ phần trăm dinh dưỡng như sau: 103 calo, 75% vitamin C có tác dụng chống ôxy hóa và tăng cường hệ miễn dịch; 24% vitamin A giúp chống oxy hóa và tăng thị lực; 12% vitamin B6 và một số vitamin B khác các tác dụng phòng bệnh não và tim; 10% lợi khuẩn; 8% đồng cần cho việc sản xuất các tế bào máu; 8% kali giúp cân bằng lượng natri trong cơ thể và 5% magie.\r\n\r\nVitamin A có tác dụng giúp sáng mắt, do đó việc ăn xoài thường xuyên sẽ giúp ngăn ngừa bệnh quáng gà, các tật khúc xạ ở mắt, khô mắt và viêm giác mạc."
+    },
+    {
+      "id": 4,
+      "id_catalog": 1,
+      "name": "Trà chanh vị trà xan",
+      "img": "tra-chanh-vi-tra-xan",
+      "img_child": "",
+      "price": 25,
+      "sale": 29,
+      "status": 1,
+      "views": 200,
+      "description": "Trà chanh có thuộc tính kháng virus và vi khuẩn. Thường xuyên uống trà chanh giúp chống nhiễm trùng và các loại bệnh. Đây được xem là một trong những lợi ích sức khỏe tốt nhất của trà chanh.\r\n\r\nTrà chanh giúp duy trì sức khỏe hệ tiêu hóa nhờ tác dụng loại bỏ các chất độc và chất cặn bã ra khỏi cơ thể.\r\n\r\nTrà chanh có thuộc tính chống ôxy hóa nhờ chứa polyphenol cùng lượng lớn vitamin C giúp ngăn ngừa tổn thương tế bào và chống lại sự tăng trưởng của các tế bào ung thư."
+    },
+    {
+      "id": 5,
+      "id_catalog": 1,
+      "name": "Hồng trà mật ong",
+      "img": "hong-tra-mat-ong",
+      "img_child": "",
+      "price": 36,
+      "sale": 42,
+      "status": 1,
+      "views": 200,
+      "description": "Mật ong được biết đến là một trong những chất làm ngọt lâu đời nhất trên trái đất. Đã đến lúc chúng ta nên tận dụng hết các đặc tính dinh dưỡng và thuốc của mật ong, vì nó có công dụng chữa nhiều bệnh.\r\n\r\nNgười ta đã sử dụng mật ong vì tính kháng khuẩn và chống nấm của nó. Một thìa mật ong chứa khoảng 64 calo và không có chất béo hoặc cholesterol. Nó chứa đầy đủ vitamin, các enzyme, axit amin và các khoáng chất như canxi, sắt, natri clorua, magiê, phosphate và kali. Hơn nữa, nó giúp làm giảm sự phát triển của vi khuẩn và các tính chất chống ô xy hóa giúp loại bỏ các gốc tự do."
+    },
+    {
+      "id": 6,
+      "id_catalog": 1,
+      "name": "Trà sữa kiwi",
+      "img": "tra-sua-kiwi",
+      "img_child": "",
+      "price": 32,
+      "sale": 45,
+      "status": 1,
+      "views": 200,
+      "description": "Kiwi là nguồn chất xơ, kali, acid folic, vitamin C và E, chất chống oxy hoá tuyệt vời, có thể ngăn ngừa táo bón và tiêu chảy cũng như những vấn đề về ruột khác."
+    },
+    {
+      "id": 7,
+      "id_catalog": 1,
+      "name": "Trà sữa khoai môn",
+      "img": "tra-sua-khoai-mon",
+      "img_child": "",
+      "price": 45,
+      "sale": 55,
+      "status": 1,
+      "views": 200,
+      "description": "Loại khoai này chứa rất nhiều chất dinh dưỡng như hợp chất hữu cơ, khoáng chất và vitamin cần thiết cho sức khỏe. Đây là nguồn thực phẩm cung cấp rất nhiều chất xơ và carbohydrate, các loại vitamin như vitamin A, vitamin C, vitamin E, vitamin B6, folate, magiê, sắt, kẽm, phốt pho, kali, mangan và đồng. Ngoài ra, khoai môn cũng cung cấp protein cho cơ thể nhưng với số lượng không đáng kể."
+    },
+    {
+      "id": 8,
+      "id_catalog": 1,
+      "name": "Trà chanh đài loan",
+      "img": "tra-chanh-dai-loan",
+      "img_child": "",
+      "price": 27,
+      "sale": 32,
+      "status": 1,
+      "views": 100,
+      "description": "Chanh có tác dụng làm sạch cơ thể bằng cách loại bỏ những độc tố. Những độc tốc này có thể gây ra nhiều loại bệnh và nhiễm trùng. Trà chanh là thức uống hiệu quả để thải độc và phòng bệnh."
+    }
+  ]
+}
