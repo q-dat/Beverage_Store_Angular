@@ -19,7 +19,7 @@ export class HomeComponent {
   }
   fetchData() {
     this.product
-      .get('http://localhost:3000/listproducts')
+      .get('http://localhost:3000')
       .subscribe((data: any) => {
         this.data = data.splice(0, 8);
         // console.log(data);
@@ -27,9 +27,9 @@ export class HomeComponent {
   }
   fetchData1() {
     this.product
-      .get('http://localhost:3000/listproducts')
+      .get('http://localhost:3000')
       .subscribe((sale: any) => {
-        const filterSale = sale.filter((item: any) => item.sale && item.sale.price);
+        const filterSale = sale.filter((item: any) => item.sale);
         this.sale = filterSale.splice(0, 8);
       });
   }

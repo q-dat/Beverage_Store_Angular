@@ -21,7 +21,7 @@ throw new Error('Method not implemented.');
   }
   fetchData() {
     this.product
-      .get('http://localhost:3000/listproducts')
+      .get('http://localhost:3000')
       .subscribe((data: any) => {
         this.data = data.splice(0, 8);
         // console.log(data);

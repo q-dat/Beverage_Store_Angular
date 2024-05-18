@@ -14,12 +14,22 @@
         <div class="relative border-gray-300 border-[1px] rounded-[10px]">
             <a href="/detail">
                 <img class="rounded-[10px] lg:w-[350px] lg:h-[350px] xl:w-[250px] xl:h-[250px] object-cover "
-                    loading="lazy" src="{{pr.img}}" alt="{{pr.name}}"></a>
+                    loading="lazy" src="../../../assets/products/{{pr.img}}" alt="{{pr.name}}"></a>
 
             <div class="flex justify-between items-start flex-row">
                 <div class="my-[10px] pl-[10px] min-h-[100px] font-serif">
                     <p class=" font-semibold">{{pr.name}}</p>
-                    <p>Giá: {{pr.price}}.000đ</p>
+                    <div class="hidden xl:block md:space-x-2 ">
+                        <span class>Giá: {{pr.sale}} .000đ</span>
+                        <del class="text-red-500 "> {{pr.price}}.000đ</del>
+                    </div>
+
+                    <div class="xl:hidden ">
+                        <p>Giá:
+                            <del class="text-red-500 ">{{pr.price}}.000đ</del>
+                        </p>
+                        <p>Còn:{{pr.sale}} .000đ</p>
+                    </div>
                 </div>
                 <div class="my-[10px] pr-[10px]">
                     <button class=" btn xl:hidden glass bg-red-600 text-white">+</button>
@@ -75,12 +85,12 @@
         <div class="relative border-gray-300 border-[1px] rounded-[10px]">
             <a href="/detail">
                 <img class="rounded-[10px] lg:w-[350px] lg:h-[350px] xl:w-[250px] xl:h-[250px] object-cover "
-                    loading="lazy" src="{{pr.img}}" alt="{{pr.name}}"></a>
+                    loading="lazy" src="../../../assets/products/{{pr.img}}" alt="{{pr.name}}"></a>
             <div class="flex justify-between items-start flex-row">
                 <div class="my-[10px] pl-[10px] min-h-[100px] font-serif">
                     <p class=" font-semibold">{{pr.name}}</p>
                     <div class="hidden xl:block md:space-x-2 ">
-                        <span class>Giá: {{pr.sale['price']}} .000đ</span>
+                        <span class>Giá: {{pr.sale}} .000đ</span>
                         <del class="text-red-500 "> {{pr.price}}.000đ</del>
                     </div>
 
@@ -88,7 +98,7 @@
                         <p>Giá:
                             <del class="text-red-500 ">{{pr.price}}.000đ</del>
                         </p>
-                        <p>Còn:{{pr.sale['price']}} .000đ</p>
+                        <p>Còn:{{pr.sale}} .000đ</p>
                     </div>
                 </div>
                 <div class="my-[10px] pr-[10px] ">
@@ -133,7 +143,7 @@
     ">
         @for (pr of data; track pr.id) {
         <div class=" flex space-x-[10px] justify-start">
-            <img class="w-[60px] h-[60px] object-cover rounded-full " src="{{pr.img}}" alt="">
+            <img class="w-[60px] h-[60px] object-cover rounded-full " src="../../../assets/products/{{pr.img}}" alt="">
             <ul class="font-serif">
                 <li class="text-white font-semibold "><a href="">{{pr.name}}</a></li>
                 <li class="text-gray-200 font-light ">{{pr.price}}.000đ</li>

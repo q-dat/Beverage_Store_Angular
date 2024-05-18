@@ -31,7 +31,7 @@ font-semibold my-5">
     </ul>
 </details>
 <div>
-    <section class="pb-5">
+    <section>
         <div class="grid md:grid-cols-3 2xl:grid-cols-4  grid-cols-2 md:gap-[10px] gap-[10px] justify-center items-center
          px-[20px] lg:px[150px] xl:px-[240px]
         ">
@@ -39,12 +39,22 @@ font-semibold my-5">
             <div class="relative border-gray-300 border-[1px] rounded-[10px]">
                 <a href="/detail">
                     <img class="rounded-[10px] lg:w-[350px] lg:h-[350px] xl:w-[250px] xl:h-[250px] object-cover "
-                        loading="lazy" src="{{pr.img}}" alt="{{pr.name}}"></a>
-
+                        loading="lazy" src="../../../assets/products/{{pr.img}}" alt="{{pr.name}}"></a>
+    
                 <div class="flex justify-between items-start flex-row">
                     <div class="my-[10px] pl-[10px] min-h-[100px] font-serif">
                         <p class=" font-semibold">{{pr.name}}</p>
-                        <p>Giá: {{pr.price}}.000đ</p>
+                        <div class="hidden xl:block md:space-x-2 ">
+                            <span class>Giá: {{pr.sale}} .000đ</span>
+                            <del class="text-red-500 "> {{pr.price}}.000đ</del>
+                        </div>
+    
+                        <div class="xl:hidden ">
+                            <p>Giá:
+                                <del class="text-red-500 ">{{pr.price}}.000đ</del>
+                            </p>
+                            <p>Còn:{{pr.sale}} .000đ</p>
+                        </div>
                     </div>
                     <div class="my-[10px] pr-[10px]">
                         <button class=" btn xl:hidden glass bg-red-600 text-white">+</button>
@@ -64,7 +74,7 @@ font-semibold my-5">
                             class="btn text-white bg-red-600 glass 
                         hover:scale-[1.1] hover:text-red-600 hover:bg-white hover:border-solid hover:border-red-500 hover:border-[1px]">
                             <i class="fa fa-cart-shopping "></i>Giỏ Hàng
-
+    
                         </button>
                         <a href="/"> <button class="btn bg-transparent border-red-500  
                         rounded-full hover:scale-[1.2] hover:glass hover:bg-red-700 hover:text-white">
