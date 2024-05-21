@@ -32,7 +32,7 @@ font-semibold my-5">
 </details>
 <div>
     <section>
-        <div class="grid md:grid-cols-3 2xl:grid-cols-4  grid-cols-2 md:gap-[10px] gap-[10px] justify-center items-center
+        <div class="grid md:grid-cols-3 2xl:grid-cols-4  grid-cols-2 md:gap-[10px] gap-[10px] justify-center items-center pb-[10px]
          px-[20px] lg:px[150px] xl:px-[240px]
         ">
             @for (pr of data; track pr.id) {
@@ -45,15 +45,15 @@ font-semibold my-5">
                     <div class="my-[10px] pl-[10px] min-h-[100px] font-serif">
                         <p class=" font-semibold">{{pr.name}}</p>
                         <div class="hidden xl:block md:space-x-2 ">
-                            <span class>Giá: {{pr.sale}} .000đ</span>
+                            <span class>{{pr.sale}} .000đ</span>
                             <del class="text-red-500 "> {{pr.price}}.000đ</del>
                         </div>
     
                         <div class="xl:hidden ">
-                            <p>Giá:
+                            <p>
                                 <del class="text-red-500 ">{{pr.price}}.000đ</del>
                             </p>
-                            <p>Còn:{{pr.sale}} .000đ</p>
+                            <p>{{pr.sale}} .000đ</p>
                         </div>
                     </div>
                     <div class="my-[10px] pr-[10px]">
