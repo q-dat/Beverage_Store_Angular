@@ -14,7 +14,7 @@ export class HomeComponent {
   sale: any[] = []
   ngOnInit(): void {
     this.fetchData();
-    this.fetchData1();
+    this.fetchSale();
 
   }
   fetchData() {
@@ -25,12 +25,11 @@ export class HomeComponent {
         // console.log(data);
       })
   }
-  fetchData1() {
+  fetchSale() {
     this.product
-      .get('http://localhost:3000')
+      .get('http://localhost:3000/sale')
       .subscribe((sale: any) => {
-        const filterSale = sale.filter((item: any) => item.sale);
-        this.sale = filterSale.splice(0, 8);
+        this.sale = sale.splice(0, 8);
       });
   }
 }

@@ -19,14 +19,19 @@ connection.connect((err) => {
   console.log('--------------------------------------------------------------------Kết Nối CSDL Thành Công!');
 });
 
-// Định nghĩa một API endpoint để lấy dữ liệu từ cơ sở dữ liệu
+// Định nghĩa một API endpoint
 app.get('/', (req, res) => {
   connection.query('SELECT * FROM products', (error, results, fields) => {
     if (error) throw error;
     res.json(results);
   });
 });
-
+app.get('/sale', (req, res) => {
+  connection.query('SELECT * FROM products WHERE sale ', (error, results, fields) => {
+    if (error) throw error;
+    res.json(results);
+  });
+});
 // Khởi động server
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
