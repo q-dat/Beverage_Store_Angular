@@ -1,153 +1,174 @@
 <div>
-    <img class="w-full" src="./assets/image/slider_1.webp" alt="banner">
+  <img class="w-full" src="./assets/image/slider_1.webp" alt="banner" />
 </div>
 <!-- ------------------------------------------------------------------------------------------------------------------------------- -->
 <div class="text-center mt-[20px] md:m-5">
-    <img class="mx-auto" src="../../../assets/image/title_module.webp" alt="">
-    <h1 class="font-mono py-2 text-[1.3rem] md:text-[2rem]"> Đồ uống ưa thích</h1>
+  <img class="mx-auto" src="../../../assets/image/title_module.webp" alt="" />
+  <h1 class="font-mono py-2 text-[1.3rem] md:text-[2rem]">Đồ uống ưa thích</h1>
 </div>
-<section>
-    <div class="grid md:grid-cols-3 2xl:grid-cols-4  grid-cols-2 md:gap-[10px] gap-[10px] justify-center items-center
-     px-[20px] lg:px[150px] xl:px-[240px]
-    ">
-        @for (pr of data; track pr.id) {
-        <div class="relative border-gray-300 border-[1px] rounded-[10px]">
-            <a href="/detail">
-                <img class="rounded-[10px] lg:w-[350px] lg:h-[350px] xl:w-[250px] xl:h-[250px] object-cover "
-                    loading="lazy" src="../../../assets/products/{{pr.img}}" alt="{{pr.name}}"></a>
+<section class="px-[20px] xl:px-[150px] ">
+  <div  class="grid md:grid-cols-3 xl:grid-cols-4 grid-cols-2 md:gap-[10px] gap-[10px] justify-center items-center">
+    @for (pr of data; track pr.id) {
+    <div class="relative border-gray-300 border-[1px] rounded-[10px]">
+      <a href="/detail">
+        <img
+          class="rounded-[10px] lg:w-[350px] lg:h-[350px] xl:w-[240px] xl:h-[220px] object-cover"
+          loading="lazy"
+          src="../../../assets/products/{{ pr.img }}"
+          alt="{{ pr.name }}"
+      /></a>
 
-            <div class="flex justify-between items-start flex-row">
-                <div class="my-[10px] pl-[10px] min-h-[100px] font-serif">
-                    <p class=" font-semibold">{{pr.name}}</p>
-                    <div class="hidden xl:block md:space-x-2 ">
-                        <span class> {{pr.sale}} .000đ</span>
-                        <del class="text-red-500 "> {{pr.price}}.000đ</del>
-                    </div>
+      <div class="flex justify-between items-start flex-row">
+        <div class="my-[10px] pl-[10px] min-h-[120px] font-serif">
+          <p class="font-semibold">{{ pr.name }}</p>
+          <div class="hidden xl:block md:space-x-2">
+            <span class> {{ pr.sale }} .000đ</span>
+            <del class="text-red-500"> {{ pr.price }}.000đ</del>
+          </div>
 
-                    <div class="xl:hidden ">
-                        <p>
-                            <del class="text-red-500 ">{{pr.price}}.000đ</del>
-                        </p>
-                        <p>{{pr.sale}} .000đ</p>
-                    </div>
-                </div>
-                <div class="my-[10px] pr-[10px]">
-                    <button class=" btn xl:hidden glass bg-red-600 text-white">+</button>
-                </div>
-            </div>
-            <div class=" hidden 
-            absolute inset-0 xl:flex justify-center items-center flex-row 
-          transform transition ease-in-out duration-1000  rounded-[10px]  
-            opacity-0 hover:opacity-100 hover:bg-white w-full hover:bg-opacity-30 
-            ">
-                <div class=" space-x-2">
-                    <a href="/detail"> <button class="btn bg-transparent border-red-500 
-                    rounded-full hover:scale-[1.2] hover:glass hover:bg-red-700 hover:text-white">
-                            <i class="fa fa-search"></i>
-                        </button></a>
-                    <button
-                        class="btn text-white bg-red-600 glass 
-                    hover:scale-[1.1] hover:text-red-600 hover:bg-white hover:border-solid hover:border-red-500 hover:border-[1px]">
-                        <i class="fa fa-cart-shopping "></i>Giỏ Hàng
-
-                    </button>
-                    <a href="/"> <button class="btn bg-transparent border-red-500  
-                    rounded-full hover:scale-[1.2] hover:glass hover:bg-red-700 hover:text-white">
-                            <i class="fa fa-heart "></i>
-                        </button> </a>
-                </div>
-            </div>
+          <div class="xl:hidden">
+            <p>
+              <del class="text-red-500">{{ pr.price }}.000đ</del>
+            </p>
+            <p>{{ pr.sale }} .000đ</p>
+          </div>
         </div>
-        }
+        <div class="my-[10px] pr-[10px]">
+          <button class="btn xl:hidden glass bg-red-600 text-white">+</button>
+        </div>
+      </div>
+      <div
+        class="hidden absolute inset-0 xl:flex justify-center items-center flex-row transform transition ease-in-out duration-1000 rounded-[10px] opacity-0 hover:opacity-100 hover:bg-white w-full hover:bg-opacity-30"
+      >
+        <div class="space-x-2">
+          <a href="/detail">
+            <button
+              class="btn bg-transparent border-red-500 rounded-full hover:scale-[1.1] hover:glass hover:bg-red-700 hover:text-white"
+            >
+              <i class="fa fa-search"></i></button
+          ></a>
+          <button
+            class="btn text-white bg-red-600 glass hover:scale-[1.1] hover:text-red-600 hover:bg-white hover:border-solid hover:border-red-500 hover:border-[1px]"
+          >
+            <i class="fa fa-cart-shopping"></i>Giỏ Hàng
+          </button>
+          <a href="/">
+            <button
+              class="btn bg-transparent border-red-500 rounded-full hover:scale-[1.1] hover:glass hover:bg-red-700 hover:text-white"
+            >
+              <i class="fa fa-heart"></i>
+            </button>
+          </a>
+        </div>
+      </div>
     </div>
+    }
+  </div>
 </section>
 <!-- ------------------------------------------------------------------------------------------------------------------------------- -->
 <div
-    class="flex justify-center items-center flex-col space-y-[10px] md:space-y-0 md:flex-row md:space-x-[10px] my-5 px-[20px]">
-    <img class="hover:opacity-50 cursor-pointer lg:w-[480px] md:w-[380px] xl:w-[395px] object-cover "
-        src="../../../assets/image/banner_1.webp" alt="">
-    <img class="hover:opacity-50 cursor-pointer  lg:w-[480px]  md:w-[380px] xl:w-[395px] object-cover "
-        src="../../../assets/image/banner_2.webp" alt="">
+  class="flex justify-center items-center flex-col space-y-[10px] md:space-y-0 md:flex-row md:space-x-[10px] my-5 px-[20px]"
+>
+  <img
+    class="hover:opacity-50 cursor-pointer lg:w-[480px] md:w-[380px] xl:w-[485px] object-cover"
+    src="../../../assets/image/banner_1.webp"
+    alt=""
+  />
+  <img
+    class="hover:opacity-50 cursor-pointer lg:w-[480px] md:w-[380px] xl:w-[485px] object-cover"
+    src="../../../assets/image/banner_2.webp"
+    alt=""
+  />
 </div>
 <!-- ------------------------------------------------------------------------------------------------------------------------------- -->
 <div class="text-center mt-[20px] md:m-5">
-    <img class="mx-auto" src="../../../assets/image/title_tab.webp" alt="">
-    <h1 class="font-mono py-2 text-[1.3rem] md:text-[2rem]"> Đồ uống giảm giá </h1>
+  <img class="mx-auto" src="../../../assets/image/title_tab.webp" alt="" />
+  <h1 class="font-mono py-2 text-[1.3rem] md:text-[2rem]">Đồ uống giảm giá</h1>
 </div>
 <!-- ------------------------------------------------------------------------------------------------------------------------------- -->
 
-<section>
-    <div class="grid md:grid-cols-3 2xl:grid-cols-4  grid-cols-2 md:gap-[10px] gap-[10px] justify-center items-center
-    px-[20px] lg:px[150px] xl:px-[240px]
-   ">
+<section class="px-[20px] xl:px-[150px] ">
+    <div  class="grid md:grid-cols-3 xl:grid-cols-4 grid-cols-2 md:gap-[10px] gap-[10px] justify-center items-center">
         @for (pr of sale; track pr.id) {
-        <div class="relative border-gray-300 border-[1px] rounded-[10px]">
-            <a href="/detail">
-                <img class="rounded-[10px] lg:w-[350px] lg:h-[350px] xl:w-[250px] xl:h-[250px] object-cover "
-                    loading="lazy" src="../../../assets/products/{{pr.img}}" alt="{{pr.name}}"></a>
-            <div class="flex justify-between items-start flex-row">
-                <div class="my-[10px] pl-[10px] min-h-[100px] font-serif">
-                    <p class=" font-semibold">{{pr.name}}</p>
-                    <div class="hidden xl:block md:space-x-2 ">
-                        <span class> {{pr.sale}} .000đ</span>
-                        <del class="text-red-500 "> {{pr.price}}.000đ</del>
-                    </div>
+    <div class="relative border-gray-300 border-[1px] rounded-[10px]">
+      <a href="/detail">
+        <img
+          class="rounded-[10px] lg:w-[350px] lg:h-[350px] xl:w-[250px] xl:h-[250px] object-cover"
+          loading="lazy"
+          src="../../../assets/products/{{ pr.img }}"
+          alt="{{ pr.name }}"
+      /></a>
+      <div class="flex justify-between items-start flex-row">
+        <div class="my-[10px] pl-[10px] min-h-[120px] font-serif">
+          <p class="font-semibold">{{ pr.name }}</p>
+          <div class="hidden xl:block md:space-x-2">
+            <span class> {{ pr.sale }} .000đ</span>
+            <del class="text-red-500"> {{ pr.price }}.000đ</del>
+          </div>
 
-                    <div class="xl:hidden ">
-                        <p>
-                            <del class="text-red-500 ">{{pr.price}}.000đ</del>
-                        </p>
-                        <p>{{pr.sale}} .000đ</p>
-                    </div>
-                </div>
-                <div class="my-[10px] pr-[10px] ">
-                    <button class=" btn xl:hidden glass bg-red-600 text-white">+</button>
-                </div>
-            </div>
-            <div class=" hidden 
-            absolute inset-0 xl:flex justify-center items-center flex-row 
-          transform transition ease-in-out duration-1000  rounded-[10px]  
-            opacity-0 hover:opacity-100 hover:bg-white w-full hover:bg-opacity-30 
-            ">
-                <div class=" space-x-2">
-                    <a href="/detail"> <button class="btn bg-transparent border-red-500 
-                rounded-full hover:scale-[1.2] hover:glass hover:bg-red-700 hover:text-white">
-                            <i class="fa fa-search"></i>
-                        </button></a>
-                    <button
-                        class="btn text-white bg-red-600 glass 
-                hover:scale-[1.1] hover:text-red-600 hover:bg-white hover:border-solid hover:border-red-500 hover:border-[1px]">
-                        <i class="fa fa-cart-shopping "></i>Giỏ Hàng
-
-                    </button>
-                    <a href="/"> <button class="btn bg-transparent border-red-500  
-                rounded-full hover:scale-[1.2] hover:glass hover:bg-red-700 hover:text-white">
-                            <i class="fa fa-heart "></i>
-                        </button> </a>
-                </div>
-            </div>
+          <div class="xl:hidden">
+            <p>
+              <del class="text-red-500">{{ pr.price }}.000đ</del>
+            </p>
+            <p>{{ pr.sale }} .000đ</p>
+          </div>
         </div>
-        }
+        <div class="my-[10px] pr-[10px]">
+          <button class="btn xl:hidden glass bg-red-600 text-white">+</button>
+        </div>
+      </div>
+      <div
+        class="hidden absolute inset-0 xl:flex justify-center items-center flex-row transform transition ease-in-out duration-1000 rounded-[10px] opacity-0 hover:opacity-100 hover:bg-white w-full hover:bg-opacity-30"
+      >
+        <div class="space-x-2">
+          <a href="/detail">
+            <button
+              class="btn bg-transparent border-red-500 rounded-full hover:scale-[1.1] hover:glass hover:bg-red-700 hover:text-white"
+            >
+              <i class="fa fa-search"></i></button
+          ></a>
+          <button
+            class="btn text-white bg-red-600 glass hover:scale-[1.1] hover:text-red-600 hover:bg-white hover:border-solid hover:border-red-500 hover:border-[1px]"
+          >
+            <i class="fa fa-cart-shopping"></i>Giỏ Hàng
+          </button>
+          <a href="/">
+            <button
+              class="btn bg-transparent border-red-500 rounded-full hover:scale-[1.1] hover:glass hover:bg-red-700 hover:text-white"
+            >
+              <i class="fa fa-heart"></i>
+            </button>
+          </a>
+        </div>
+      </div>
     </div>
+    }
+  </div>
 </section>
 <!-- ------------------------------------------------------------------------------------------------------------------------------- -->
 <div class="text-center mt-[20px] md:m-5">
-    <img class="mx-auto" src="../../../assets/image/title_tab.webp" alt="">
-    <h1 class="font-mono py-2 text-[1.3rem] md:text-[2rem]"> Đồ uống đặc biệt </h1>
+  <img class="mx-auto" src="../../../assets/image/title_tab.webp" alt="" />
+  <h1 class="font-mono py-2 text-[1.3rem] md:text-[2rem]">Đồ uống đặc biệt</h1>
 </div>
 <!-- ------------------------------------------------------------------------------------------------------------------------------- -->
-<section class="bg-menu bg-repeat min-h-[350px]">
-    <div class=" grid md:grid-cols-3 2xl:grid-cols-3  grid-cols-2 md:gap-[20px] gap-[10px]
-     px-[20px] lg:px-[240px] py-[20px]
-    ">
-        @for (pr of data; track pr.id) {
-        <div class=" flex space-x-[10px] justify-start">
-            <img class="w-[60px] h-[60px] object-cover rounded-full " src="../../../assets/products/{{pr.img}}" alt="">
-            <ul class="font-serif">
-                <li class="text-white font-semibold "><a href="">{{pr.name}}</a></li>
-                <li class="text-gray-200 font-light ">{{pr.price}}.000đ</li>
-            </ul>
-        </div>
-        }
+<section class="bg-menu bg-repeat min-h-[350px] px-[20px] xl:px-[150px] py-[20px]">
+  <div
+    class="grid md:grid-cols-3 xl:grid-cols-3 grid-cols-2 md:gap-[20px] gap-[10px] "
+  >
+    @for (pr of data; track pr.id) {
+    <div class="flex space-x-[10px] justify-start">
+      <img
+        class="w-[60px] h-[60px] object-cover rounded-full"
+        src="../../../assets/products/{{ pr.img }}"
+        alt=""
+      />
+      <ul class="font-serif">
+        <li class="text-white font-semibold">
+          <a href="">{{ pr.name }}</a>
+        </li>
+        <li class="text-gray-200 font-light">{{ pr.price }}.000đ</li>
+      </ul>
     </div>
+    }
+  </div>
 </section>

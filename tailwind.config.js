@@ -26,6 +26,7 @@ module.exports = {
       'red-500': '#ef4444',
       'red-600': '#dc2626',
       'red-700': '#b91c1c',
+      'blue-700':'#1d4ed8',
     }
   },
   plugins: [
