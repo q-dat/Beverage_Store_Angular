@@ -1,6 +1,6 @@
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
-
+import { Products } from '../../common/product';
 @Component({
   selector: 'app-shop',
   standalone: true,
@@ -14,15 +14,15 @@ throw new Error('Method not implemented.');
 }
   
   product = inject(HttpClient)
-  data: any[] = []
+  data: Products[] = []
   ngOnInit(): void {
     this.fetchData();
 
   }
   fetchData() {
     this.product
-      .get('http://localhost:3000')
-      .subscribe((data: any) => {
+      .get<Products[]>('http://localhost:3000')
+      .subscribe((data: Products[]) => {
         this.data = data.splice(0, 8);
         // console.log(data);
       })

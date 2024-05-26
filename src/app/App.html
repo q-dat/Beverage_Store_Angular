@@ -71,7 +71,7 @@
       <a href="/login" class="btn">
         <i class="fa fa-user"></i>
         Tài Khoản</a>
-      <a href="/cart" class="btn">
+      <a href="" class="btn">
         <i class="fa fa-cart-shopping"></i>
         Giỏ Hàng</a>
     </div>
@@ -90,7 +90,7 @@
   <router-outlet></router-outlet>
   <!-- Footer> -->
   <!-- ------------------------------------------------------------------------------------------------------------------------------- -->
-  <footer class="bg-main footer xl:pb-20 pb-[100px]  pt-[20px]  lg:px-20  px-[40px] text-base-content">
+  <footer class="bg-main footer xl:pb-20 pb-[500px]  pt-[20px]  lg:px-20  px-[10px] text-base-content">
     <nav>
       <h6 class="footer-title">Giới Thiệu</h6>
       <a class="link link-hover">Về Chúng Tôi</a>
@@ -107,18 +107,14 @@
       <a class="link link-hover">Chính Sách Bảo Mật</a>
       <a class="link link-hover">Chính Sách Cookie</a>
     </nav>
-    <form>
-      <h6 class="footer-title">Liên Hệ</h6>
-      <fieldset class="form-control w-80">
-        <label class="label">
-          <span class="label-text">Nhập Email Của Bạn</span>
-        </label>
-        <div class="join">
-          <input type="text" placeholder="username@site.com" class="input input-bordered join-item" />
-          <button class="btn btn-success join-item text-white">Đồng ý</button>
-        </div>
-      </fieldset>
-    </form>
+
+    <form >
+      <h1 class="footer-title">Liên Hệ</h1>
+      <div class="flex  border-[1px] rounded-[10px] overflow-hidden">
+        <input class=" font-light p-3 focus:outline-none" type="email" placeholder="Nhập email của bạn">
+        <button class="font-semibold p-3 bg-green-700 text-white focus:outline-none" type="submit">Đồng Ý</button>
+      </div>
+    </form>    
 
   </footer>
 

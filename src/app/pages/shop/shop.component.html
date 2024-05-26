@@ -31,7 +31,7 @@ font-semibold my-5">
     </ul>
 </details>
 <div>
-    <section class="px-[20px] xl:px-[150px] pb-[20px]">
+    <section class="px-[20px] xl:px-[150px] pb-[10px]">
         <div  class="grid md:grid-cols-3 xl:grid-cols-4 grid-cols-2 md:gap-[10px] gap-[10px] justify-center items-center">
           @for (pr of data; track pr.id) {
           <div class="relative border-gray-300 border-[1px] rounded-[10px]">
@@ -45,7 +45,7 @@ font-semibold my-5">
       
             <div class="flex justify-between items-start flex-row">
               <div class="my-[10px] pl-[10px] min-h-[120px] font-serif">
-                <p class="font-semibold">{{ pr.name }}</p>
+                <p class="font-light">{{ pr.name }}</p>
                 <div class="hidden xl:block md:space-x-2">
                   <span class> {{ pr.sale }} .000đ</span>
                   <del class="text-red-500"> {{ pr.price }}.000đ</del>
