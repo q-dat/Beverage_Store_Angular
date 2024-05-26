@@ -35,7 +35,7 @@ font-semibold my-5">
         <div  class="grid md:grid-cols-3 xl:grid-cols-4 grid-cols-2 md:gap-[10px] gap-[10px] justify-center items-center">
           @for (pr of data; track pr.id) {
           <div class="relative border-gray-300 border-[1px] rounded-[10px]">
-            <a href="/detail">
+            <a href="/detail/{{pr.id}}">
               <img
                 class="rounded-[10px] lg:w-[350px] lg:h-[350px] xl:w-[240px] xl:h-[220px] object-cover"
                 loading="lazy"
@@ -66,7 +66,7 @@ font-semibold my-5">
               class="hidden absolute inset-0 xl:flex justify-center items-center flex-row transform transition ease-in-out duration-1000 rounded-[10px] opacity-0 hover:opacity-100 hover:bg-white w-full hover:bg-opacity-30"
             >
               <div class="space-x-2">
-                <a href="/detail">
+                <a href="/detail/{{pr.id}}">
                   <button
                     class="btn bg-transparent border-red-500 rounded-full hover:scale-[1.1] hover:glass hover:bg-red-700 hover:text-white"
                   >

@@ -8,11 +8,7 @@ import { Products } from '../../common/product';
   templateUrl: './shop.component.html',
   styleUrl: './shop.component.css'
 })
-export class ShopComponent {
-pageChangeEvent($event: Event) {
-throw new Error('Method not implemented.');
-}
-  
+export class ShopComponent {  
   product = inject(HttpClient)
   data: Products[] = []
   ngOnInit(): void {
