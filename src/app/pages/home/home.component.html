@@ -16,7 +16,7 @@
   <div class="grid md:grid-cols-3 xl:grid-cols-4 grid-cols-2 md:gap-[10px] gap-[10px] justify-center items-center">
     @for (pr of data; track pr.id) {
     <div class="relative border-gray-300 border-[1px] rounded-[10px]">
-      <a href="/detail">
+      <a href="/detail/{{pr.id}}">
         <img class="rounded-[10px] lg:w-[350px] lg:h-[350px] xl:w-[240px] xl:h-[220px] object-cover" loading="lazy"
           src="../../../assets/products/{{ pr.img }}" alt="{{ pr.name }}" /></a>
 
@@ -80,7 +80,7 @@
   <div class="grid md:grid-cols-3 xl:grid-cols-4 grid-cols-2 md:gap-[10px] gap-[10px] justify-center items-center">
     @for (pr of sale; track pr.id) {
     <div class="relative border-gray-300 border-[1px] rounded-[10px]">
-      <a href="/detail">
+      <a href="/detail/{{pr.id}}">
         <img class="rounded-[10px] lg:w-[350px] lg:h-[350px] xl:w-[250px] xl:h-[250px] object-cover" loading="lazy"
           src="../../../assets/products/{{ pr.img }}" alt="{{ pr.name }}" /></a>
       <div class="flex justify-between items-start flex-row">
