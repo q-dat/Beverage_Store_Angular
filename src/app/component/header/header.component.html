@@ -37,11 +37,6 @@
           src="../assets/image/logo.webp" alt="Logo"></a>
     </div>
   </div>
-
-
-
-
-
   <!-- Desktop  -->
   <!-- ------------------------------------------------------------------------------------------------------------------------------- -->
   <div class="navbar-center lg:hidden">
@@ -68,18 +63,18 @@
     <a href="/login" class="btn">
       <i class="fa fa-user"></i>
       Tài Khoản</a>
-
     <button class="btn" onclick="cart.showModal()"><i class="fa fa-cart-shopping"></i>
       Giỏ Hàng</button>
     <dialog id="cart" class="relative w-full m-[100px] glass ">
       <div class="overflow-y-auto overscroll-contain">
         <form method="dialog">
-          <button class="btn text-[25px] border-[1px] border-black border-solid text-red hover:bg-red hover:text-white glass text-center font-light absolute right-0">x</button>
+          <button
+            class="btn m-2 text-[25px] border-[1px] border-black border-solid text-red hover:bg-red hover:text-white glass text-center font-light absolute right-0">x</button>
         </form>
         <!-- ------------------------------------------------------------------------------------------------------------------------------- -->
-        <div class="container mx-auto mt-10 px-[100px] ">
+        <div class="container mx-auto mt-10 px-[100px] py-10">
           <div class="sm:flex my-10">
-            <div class="  w-full  sm:w-3/4 glass px-10 py-10">
+            <div class="  w-full  sm:w-3/4 glass px-10 py-[100px]">
               <div class="flex justify-between border-b pb-8">
                 <h1 class="font-semibold text-2xl">Giỏ Hàng</h1>
                 <h2 class="font-semibold text-2xl">Tổng Số Lượng:</h2>
@@ -95,15 +90,12 @@
                 <div class="md:pl-3 md:w-8/12 2xl:w-3/4 flex flex-col justify-center">
                   <div class="flex items-center justify-between w-full">
                     <p class="text-base  leading-none ">Luxe card holder</p>
-                 
                   </div>
                   <p class="text-xs leading-3  pt-2">Height: 10 inches</p>
                   <p class="text-xs leading-3  py-4">Color: Black</p>
                   <p class="w-96 text-xs leading-3 ">Composition: 100% calf leather</p>
                   <div class="flex items-center justify-between pt-5">
-                    <div class="flex itemms-center">
-                      <p class="text-xs leading-3 underline text-red-500 pl-5 cursor-pointer">Xoá</p>
-                    </div>
+                    <p class="text-xs leading-3 underline text-red-500 cursor-pointer">Xoá</p>
                     <p class=" leading-none text-gray-800">.000</p>
                   </div>
                 </div>
@@ -117,7 +109,6 @@
               </a>
             </div>
             <!-- ------------------------------------------------------------------------------------------------------------------------------- -->
-
             <div id="summary" class=" w-full  sm:w-1/4   md:w-1/2     px-8 py-10">
               <h1 class="font-semibold text-2xl border-b pb-8">Hoá Đơn</h1>
 
@@ -151,7 +142,6 @@
           </div>
         </div>
         <!-- ------------------------------------------------------------------------------------------------------------------------------- -->
-
       </div>
     </dialog>
   </div>
