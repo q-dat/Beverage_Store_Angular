@@ -33,7 +33,7 @@ async function CreateHomeJsonFile() {
         };
         // Thực hiện ghi dữ liệu thành file json
         const jsonData = JSON.stringify(homeData, null, 2);
-        await fs.writeFile('db.json', jsonData);
+        await fs.writeFile('server/db.json', jsonData);
         console.log('--------------------------------------------------------------------Xuất file JSON thành công');
         pool.end(); //Kết thúc pool kết nối
     } catch (error) {
