@@ -17,7 +17,7 @@ export class ShopComponent {
   }
   fetchData() {
     this.product
-      .get<Products[]>('http://localhost:3000')
+      .get<Products[]>('http://localhost:3000/products')
       .subscribe((data: Products[]) => {
         this.data = data.splice(0, 8);
         // console.log(data);

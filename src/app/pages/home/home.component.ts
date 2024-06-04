@@ -17,7 +17,7 @@ export class HomeComponent {
     this.fetchSale();
   }
   fetchData() {
-    this.product.get<Products[]>('http://localhost:3000').subscribe((data: Products[]) => {
+    this.product.get<Products[]>('http://localhost:3000/products').subscribe((data: Products[]) => {
       this.data = data.splice(0, 8);
       // console.log(data);
     });

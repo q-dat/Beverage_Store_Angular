@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "concurrently \"ng serve -o\" \"node server/app.js\" \"node server/ex.js\"",
+    "s": "concurrently \"node server/app.js\" \"node server/ex.js\"",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
@@ -24,7 +24,7 @@
     "concurrently": "^8.2.2",
     "express": "^4.19.2",
     "mysql": "^2.18.1",
-    "mysql2": "^3.9.7",
+    "mysql2": "^3.10.0",
     "ngx-pagination": "^6.0.3",
     "rxjs": "~7.8.0",
     "sequelize": "^6.37.3",

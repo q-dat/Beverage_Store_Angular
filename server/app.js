@@ -20,10 +20,21 @@ connection.connect((err) => {
 });
 
 // Định nghĩa một API endpoint
-app.get('/', (req, res) => {
-  connection.query('SELECT * FROM products', (error, results, fields) => {
+app.get('/products', (req, res) => {
+  connection.query('SELECT * FROM products ', (error, results, fields) => {
     if (error) throw error;
     res.json(results);
+  });
+});
+app.get('/products/:id', (req, res) => {
+  const productId = req.params.id;
+  connection.query('SELECT * FROM products WHERE id = ?', [productId], (error, results, fields) => {
+    if (error) throw error;
+    if (results.length === 0) {
+      res.status(404).json({ message: 'Sản phẩm không tồn tại' });
+    } else {
+      res.json(results[0]);
+    }
   });
 });
 app.get('/sale', (req, res) => {
@@ -35,5 +46,5 @@ app.get('/sale', (req, res) => {
 // Khởi động server
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
-  console.log(`--------------------------------------------------------------------http://localhost:${port}`);
+  console.log(`--------------------------------------------------------------------http://localhost:${port}/products`);
 });
