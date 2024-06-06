@@ -9,18 +9,17 @@ import { Products } from '../../common/product';
   styleUrl: './shop.component.css'
 })
 export class ShopComponent {  
-  product = inject(HttpClient)
-  data: Products[] = []
-  ngOnInit(): void {
-    this.fetchData();
-
-  }
-  fetchData() {
-    this.product
-      .get<Products[]>('http://localhost:3000/products')
-      .subscribe((data: Products[]) => {
-        this.data = data.splice(0, 8);
-        // console.log(data);
-      })
-  }
+  product = inject(HttpClient);
+  data: Products[] = [];
+  sale: Products[] = [];
+ constructor(private http: HttpClient) {}
+ ngOnInit(): void {
+   this.fetchData();
+ }
+ fetchData() {
+   this.product.get<Products[]>('http://localhost:3000/products').subscribe((data: Products[]) => {
+     this.data = data.splice(0, 8);
+     console.log(this.data);
+   });
+ }
 }

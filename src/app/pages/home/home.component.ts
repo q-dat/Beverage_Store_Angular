@@ -10,8 +10,9 @@ import{Products} from '../../common/product'
 })
 export class HomeComponent {
   product = inject(HttpClient);
-  data: Products[] = [];
-  sale: Products[] = [];
+   data: Products[] = [];
+   sale: Products[] = [];
+  constructor(private http: HttpClient) {}
   ngOnInit(): void {
     this.fetchData();
     this.fetchSale();
@@ -19,7 +20,7 @@ export class HomeComponent {
   fetchData() {
     this.product.get<Products[]>('http://localhost:3000/products').subscribe((data: Products[]) => {
       this.data = data.splice(0, 8);
-      // console.log(data);
+      console.log(this.data);
     });
   }
   fetchSale() {

@@ -1,11 +1,14 @@
-// Cài đặt các module cần thiết
 const express = require('express');
 const mysql = require('mysql');
+const cors = require('cors'); // Import middleware cors
 
-// Tạo một ứng dụng Express
 const app = express();
 
-// Cấu hình kết nối cơ sở dữ liệu
+app.use(cors({
+  origin: 'http://localhost:4200', // Allow requests from this origin
+  optionsSuccessStatus: 200 // Some legacy browsers (IE11, various SmartTVs) choke on 204
+}));
+
 const connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
@@ -13,19 +16,18 @@ const connection = mysql.createConnection({
   database: 'beverage-store-angular'
 });
 
-// Kết nối với cơ sở dữ liệu
 connection.connect((err) => {
   if (err) throw err;
-  console.log('--------------------------------------------------------------------Kết Nối CSDL Thành Công!');
+  console.log('Kết Nối CSDL Thành Công!');
 });
 
-// Định nghĩa một API endpoint
 app.get('/products', (req, res) => {
   connection.query('SELECT * FROM products ', (error, results, fields) => {
     if (error) throw error;
     res.json(results);
   });
 });
+
 app.get('/products/:id', (req, res) => {
   const productId = req.params.id;
   connection.query('SELECT * FROM products WHERE id = ?', [productId], (error, results, fields) => {
@@ -37,14 +39,15 @@ app.get('/products/:id', (req, res) => {
     }
   });
 });
+
 app.get('/sale', (req, res) => {
   connection.query('SELECT * FROM products WHERE sale ', (error, results, fields) => {
     if (error) throw error;
     res.json(results);
   });
 });
-// Khởi động server
+
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
-  console.log(`--------------------------------------------------------------------http://localhost:${port}/products`);
+  console.log(`Server đang lắng nghe trên http://localhost:${port}`);
 });
