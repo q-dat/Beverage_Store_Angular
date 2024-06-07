@@ -26,7 +26,7 @@
     },
     {
       "id": 3,
-      "id_catalog": 1,
+      "id_catalog": 2,
       "name": "Sinh tố xoài aloha",
       "img": "sinh-to-xoai-aloha.webp",
       "img_child": "sinh-to-xoai-aloha.webp",
@@ -50,7 +50,7 @@
     },
     {
       "id": 5,
-      "id_catalog": 1,
+      "id_catalog": 2,
       "name": "Hồng trà mật ong",
       "img": "hong-tra-mat-ong.webp",
       "img_child": "hong-tra-mat-ong.webp",

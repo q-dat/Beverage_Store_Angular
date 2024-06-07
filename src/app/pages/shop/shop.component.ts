@@ -28,6 +28,12 @@ export class ShopComponent {
         console.log(data);
       })
   }
+  fetchProductsByCategory(categoryId: string): void {
+    this.http.get<Products[]>(`http://localhost:3000/products/catalog/${categoryId}`)
+      .subscribe((data: Products[]) => {
+        this.data = data;
+      });
+  }
   addToCart(item: Products): void {
     this.cartService.addToCart(item);
     console.log(this.cartService.getCart());

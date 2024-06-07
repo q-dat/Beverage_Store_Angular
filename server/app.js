@@ -65,6 +65,15 @@ app.post('/register', async (req, res) => {
       res.status(500).send({ error: 'Lỗi truy vấn' });
   }
 });
+// Lấy danh sách sản phẩm theo danh mục
+app.get('/products/catalog/:id_catalog', (req, res) => {
+  const id_catalog = req.params.id_catalog;
+  connection.query('SELECT * FROM products WHERE id_catalog = ?', [id_catalog], (error, results, fields) => {
+    if (error) throw error;
+    res.json(results);
+  });
+});
+
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`--------------------------------------------------------------------http://localhost:${port}/products`);
