@@ -63,7 +63,7 @@
 
     <a href="/login" class="btn ">
       <ng-container *ngIf="username; else loginButton regiterButton">
-        <div (click)="logout()" class=" flex flex-col justify-center items-start">
+        <div (click)="logout()" class=" flex flex-col justify-center items-center px-[10px]">
           <div class="py-[4px]"> <i class="text-gray-600 fa fa-user"></i> {{ username}}</div>
           <p class="border-t font-semibold text-[10px] border-gray-300 py-[4px]">
             Đăng Xuất</p>

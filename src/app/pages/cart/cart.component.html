@@ -1,17 +1,16 @@
 <!-- ------------------------------------------------------------------------------------------------------- -->
 <div class="glass mb-10 lg:px-20 py-2 px-[10px] text-sm breadcrumbs">
   <ul class="font-light">
-      <li><a href="/"><i class="fa-solid fa-house pr-2"></i>Trang Chủ</a></li>
-      <li><a href="/cart"><i class="fa-solid fa-circle-info pr-2"></i>Giỏ Hàng</a></li>
+    <li><a href="/"><i class="fa-solid fa-house pr-2"></i>Trang Chủ</a></li>
+    <li><a href="/cart"><i class="fa-solid fa-circle-info pr-2"></i>Giỏ Hàng</a></li>
   </ul>
 </div>
 <!-- ------------------------------------------------------------------------------------------------------- -->
-<section class="max-w-4xl mx-auto px-4">
-  <!-- <h2>Giỏ Hàng Của Bạn</h2> -->
-  <div>
-    <table class="w-full">
+<section class="flex justify-between px-[80px] pb-10">
+  <div class="w-full overflow-x-auto">
+    <table class="table-auto border-collapse w-full text-center">
       <thead>
-        <tr>
+        <tr class="bg-gray-200">
           <th class="px-4 py-2">Sản Phẩm</th>
           <th class="px-4 py-2">Hình</th>
           <th class="px-4 py-2">Số Lượng</th>
@@ -20,31 +19,46 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let item of cart; let i = index">
+      <div class="text-start py-2 ">
+        <div *ngIf="isCartEmpty" >
+          <p class=" py-2">
+            Giỏ hàng của bạn đang trống ⚠️
+          </p>
+          <button class="btn bg-white border-indigo-500 block">
+            <a href="/shop"><i class=" text-red fa fa-reply"></i> Mục Sản Phẩm</a>
+          </button>
+        </div>
+        </div>
+        <tr class="border-b border-gray-200" *ngFor="let item of cart; let i = index">
           <td class="px-4 py-2">{{ item.name }}</td>
-          <td class="px-4 py-2"><img [src]="'../../../assets/products/' + item.img" alt="" class="w-24 h-auto"></td>
+          <td class="px-4 py-2"><img src="../../../assets/products/{{item.img}}" alt="{{ item.name }}"
+              class="w-20 h-auto"></td>
           <td class="px-4 py-2">
             <div class="flex items-center">
               <button (click)="decrementCount(i)" class="text-blue-500 mr-2">-</button>
-              <input type="text" name="Count" [(ngModel)]="item.count" class="w-12 border border-gray-300 rounded-lg px-2 py-1 text-center">
+              <input type="text" name="Count" [(ngModel)]="item.count"
+                class="w-12 border border-gray-300 rounded-lg px-2 py-1 text-center">
               <button (click)="incrementCount(i)" class="text-blue-500 ml-2">+</button>
             </div>
           </td>
-          <td class="px-4 py-2">{{item.count * item.price | number}} đ</td>
-          <td class="px-4 py-2"><button (click)="removeItemFromCart(item)" class="text-red-500">Xoá</button></td>
+          <td class="px-4 py-2">{{ (item.count * item.price) | number }}.000đ</td>
+          <td class="px-4 py-2"><button (click)="removeItemFromCart(item)" class="btn bg-red text-white font-light">Xoá</button></td>
         </tr>
       </tbody>
     </table>
   </div>
-  <div class="bg-white rounded-lg shadow-md p-6 mt-6">
-    <h3 class="text-lg font-semibold mb-4">Thông Tin Đơn Hàng</h3>
+
+
+  <div class="bg-white rounded-lg shadow-md  w-1/2 py-2 px-5">
+    <h3 class="text-lg font-semibold">Thông Tin Đơn Hàng</h3>
     <hr class="my-4">
-    <p class="mb-4">Tổng Tiền: <span id="sum_cart" class="font-bold">{{getTotalCost() | number}} đ</span></p>
+    <p class="mb-4">Tổng Tiền: <span id="sum_cart" class="font-bold">{{getTotalCost() | number}}.000đ</span></p>
     <hr class="my-4">
-    <p class="mb-4">Phí vận chuyển sẽ được tính ở trang thanh toán. Bạn cũng có thể nhập mã giảm giá ở trang thanh toán.</p>
-    <button class="bg-blue-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-600"><a href="/checkout">THANH TOÁN</a></button>
+    <p class="mb-4">Phí vận chuyển sẽ được tính ở trang thanh toán. Bạn cũng có thể nhập mã giảm giá ở trang thanh toán.
+    </p>
+    <button class="bg-blue-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-600"><a
+        href="/checkout">THANH TOÁN</a></button>
     <br>
-    <p class="mt-4"><a href="/shop" class="text-blue-500"><i class="fa fa-reply"></i> Tiếp Tục Mua Hàng</a></p>
+    <p class="mt-4"><a href="/shop" class="bg-white btn border-indigo-500"><i class="text-red fa fa-reply"></i> Tiếp Tục Mua Hàng</a></p>
   </div>
 </section>
-

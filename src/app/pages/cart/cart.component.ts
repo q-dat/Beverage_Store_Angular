@@ -9,17 +9,19 @@ import { FormsModule } from '@angular/forms';
   standalone: true,
   imports: [HttpClientModule,CommonModule,FormsModule],
   templateUrl: './cart.component.html',
-  styleUrls: ['./cart.component.css'] // Corrected 'styleUrl' to 'styleUrls'
 })
 export class CartComponent implements OnInit {
   public cart: any[] = [];
-
+  isCartEmpty: boolean = false;
   constructor(private http: HttpClient, private cartService: CartService) { }
 
   ngOnInit(): void {
     this.cart = this.cartService.getCart();
+    this.checkCart();
   }
-
+  checkCart(): void {
+    this.isCartEmpty = this.cart.length === 0;
+  }
   removeItemFromCart(index: number): void {
     this.cartService.removeFromCart(index);
     this.cart = this.cartService.getCart(); 
@@ -35,13 +37,13 @@ export class CartComponent implements OnInit {
 
   incrementCount(index: number): void {
     this.cartService.updateCount(index, this.cart[index].count + 1);
-    this.cart = this.cartService.getCart(); // Ensure the cart is updated
+    this.cart = this.cartService.getCart();
   }
 
   decrementCount(index: number): void {
     if (this.cart[index].count > 1) {
       this.cartService.updateCount(index, this.cart[index].count - 1);
-      this.cart = this.cartService.getCart(); // Ensure the cart is updated
+      this.cart = this.cartService.getCart(); 
     }
   }
 }
