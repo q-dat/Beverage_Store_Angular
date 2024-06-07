@@ -22,7 +22,7 @@ export class RegisterComponent {
 
   onSubmit(): void {
     if (!this.email || !this.password || !this.address || !this.username) {
-      this.errorMessage = 'Vui lòng nhập đủ thông tin';
+      this.errorMessage = 'Vui lòng nhập đầy đủ thông tin!';
       return;
     }
     this.authService.register(this.email, this.password, this.address, this.username).subscribe(
@@ -32,13 +32,13 @@ export class RegisterComponent {
           this.errorMessage = '';
           this.router.navigate(['/login']);
         } else {
-          this.errorMessage = 'Đăng ký thất bại, vui lòng thử lại';
+          this.errorMessage = 'Đăng ký thất bại, vui lòng thử lại!';
           this.successMessage = '';
         }
       },
       error => {
         console.error('An error occurred:', error);
-        this.errorMessage = 'Đăng ký thất bại, vui lòng thử lại';
+        this.errorMessage = 'Đăng ký thất bại, vui lòng thử lại!';
         this.successMessage = '';
       }
     );
@@ -50,7 +50,7 @@ export class RegisterComponent {
   imports: [
     CommonModule,
     FormsModule,
-    RouterModule // Thêm RouterModule vào imports
+    RouterModule
   ]
 })
 export class RegisterModule { }

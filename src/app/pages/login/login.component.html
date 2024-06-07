@@ -6,18 +6,39 @@
     </ul>
 </div>
 <!-- ------------------------------------------------------------------------------------------------------- -->
-<div class="form-login bg-main p-8 rounded-lg shadow-md max-w-md mx-auto px-8 pt-6 pb-8 mb-4">
-  <form action="">
-    <h3 class="text-2xl font-semibold mb-4">ĐĂNG NHẬP</h3>
-    <label for="email" class="block mb-2"><b>Email</b></label>
-    <input type="email" class="input-field mb-4 w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500" [(ngModel)]="email" placeholder="Email" id="email" name="email">
-    <label for="pass" class="block mb-2"><b>Password</b></label>
-    <input type="password" class="input-field mb-4 w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500" [(ngModel)]="password" placeholder="Password" id="pass" name="password">
-    <input type="checkbox" class="mr-2" (click)="lookpass()">
-    <label class="text-sm"><b>Hiện Thị Mật Khẩu</b></label><br>
-    <button type="button" class="btn-login bg-indigo-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-indigo-600" (click)="check()">Đăng Nhập</button>
-    <button type="button" class="btn-register text-indigo-500 font-semibold py-2 px-4 rounded-lg border border-indigo-500 hover:bg-indigo-100">
-      <a href="/register"><b>Đăng Ký</b></a>
-    </button>
-  </form>
+<div class="flex items-center justify-center">
+    <div class="w-full max-w-md bg-white shadow-md rounded-lg my-10 p-8">
+
+        <form action="#" method="POST" class="space-y-6 ">
+            <h2 class="text-2xl font-bold mb-6 text-center">Đăng Nhập</h2>
+            <div>
+
+                <label for="email" class=" text-sm font-medium text-gray-600"><b>Email</b></label>
+                <input
+                    class=" w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                    t ype="email" [(ngModel)]="email" placeholder="Email" id="email" name="email">
+            </div>
+            <div>
+
+                <label for="pass" class=" text-sm font-medium text-gray-600"><b>Mật Khẩu</b></label>
+                <input
+                    class=" w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                    type="password" [(ngModel)]="password" placeholder="Mật Khẩu" id="pass" name="password">
+            </div>
+            <div class="flex items-center justify-start">
+                <input class="h-4 w-4 text-indigo-500 focus:ring-indigo-500 border-gray-300 rounded" type="checkbox"
+                    (click)="lookpass()">
+                <label class="ml-2 text-sm"><b>Hiện Thị Mật Khẩu</b></label><br>
+            </div>
+
+            <button type="submit" (click)="check()"
+                class="glass w-full flex justify-center py-2 px-4 border border-indigo-500 rounded-md shadow-sm text-sm font-medium text-white bg-indigo-700 hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                Đăng Nhập
+            </button>
+            <a type="submit" href="/register"
+                class="glass w-full flex justify-center py-2 px-4 border border-indigo-500 rounded-md shadow-sm text-sm font-medium text-indigo-500 hover:text-white hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                Đăng Ký
+            </a>
+        </form>
+    </div>
 </div>
