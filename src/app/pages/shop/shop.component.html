@@ -5,8 +5,19 @@
   </ul>
 </div>
 <!-- ------------------------------------------------------------------------------------------------------- -->
+
 <div class="hidden lg:flex flex-col w-[500px] pb-5 pl-[20px] xl:pl-[150px]">
-  <h1 class="font-semibold text-[20px] my-5 border-black  border-b-[1px] w-[200px]">Danh Mục Sản Phẩm:</h1>
+  <div class="flex py-5">
+    <input
+      class="flex-1 px-3 py-2 border border-gray-300 rounded-l-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+      type="text" [(ngModel)]="searchTerm" placeholder="Nhập tên sản phẩm...">
+    <button class="px-3 py-2 bg-indigo-700 text-white font-semibold focus:outline-none rounded-r-md" type="submit"
+      (click)="searchProducts()">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
+  </div>
+
+
   <ul class="flex justify-start items-center space-x-5 ">
     <li class="btn bg-main glass"><a href="/shop">Tất Cả Sản Phẩm</a></li>
     <li class="btn bg-main glass" (click)="fetchProductsByCategory('1')">Trà Truyền Thống</li>
@@ -24,11 +35,11 @@ font-semibold my-5">
   <summary class=" border-black  border-b-[1px] w-[170px]">Danh Mục Sản Phẩm</summary>
   <ul class="grid grid-cols-2 space-x-2 space-y-2 md:w-full  justify-start items-start">
     <li class="btn bg-main glass"><a href="/shop">Tất Cả Sản Phẩm</a></li>
-    <li class="btn bg-main glass">Trà Truyền Thống</li>
-    <li class="btn bg-main glass">Trà Sữa Trái Cây</li>
-    <li class="btn bg-main glass">Trà Sữa Đài Loan</li>
-    <li class="btn bg-main glass">Nước Trái Cây</li>
-    <li class="btn bg-main glass">Đồ Uống Nóng</li>
+    <li class="btn bg-main glass" (click)="fetchProductsByCategory('1')">Trà Truyền Thống</li>
+    <li class="btn bg-main glass" (click)="fetchProductsByCategory('2')">Trà Sữa Trái Cây</li>
+    <li class="btn bg-main glass" (click)="fetchProductsByCategory('3')">Trà Sữa Đài Loan</li>
+    <li class="btn bg-main glass" (click)="fetchProductsByCategory('4')">Nước Trái Cây</li>
+    <li class="btn bg-main glass" (click)="fetchProductsByCategory('5')">Đồ Uống Nóng</li>
   </ul>
 </details>
 <div>

@@ -2,7 +2,7 @@
   "Products": [
     {
       "id": 1,
-      "id_catalog": 1,
+      "id_catalog": 2,
       "name": "Sinh tố dâu tây",
       "img": "sinh-to-dau-tay.webp",
       "img_child": "sinh-to-dau-tay.webp",
@@ -50,7 +50,7 @@
     },
     {
       "id": 5,
-      "id_catalog": 2,
+      "id_catalog": 3,
       "name": "Hồng trà mật ong",
       "img": "hong-tra-mat-ong.webp",
       "img_child": "hong-tra-mat-ong.webp",
@@ -62,7 +62,7 @@
     },
     {
       "id": 6,
-      "id_catalog": 1,
+      "id_catalog": 4,
       "name": "Trà sữa kiwi",
       "img": "tra-sua-kiwi.webp",
       "img_child": "tra-sua-kiwi.webp",
@@ -74,7 +74,7 @@
     },
     {
       "id": 7,
-      "id_catalog": 1,
+      "id_catalog": 3,
       "name": "Trà sữa khoai môn",
       "img": "tra-sua-khoai-mon.webp",
       "img_child": "tra-sua-khoai-mon.webp",
@@ -86,7 +86,7 @@
     },
     {
       "id": 8,
-      "id_catalog": 1,
+      "id_catalog": 4,
       "name": "Trà chanh đài loan",
       "img": "tra-chanh-dai-loan.webp",
       "img_child": "tra-chanh-dai-loan.webp",

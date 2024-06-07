@@ -73,6 +73,13 @@ app.get('/products/catalog/:id_catalog', (req, res) => {
     res.json(results);
   });
 });
+app.get('/products/search/:name', (req, res) => {
+  const productName = req.params.name;
+  connection.query('SELECT * FROM products WHERE name LIKE ?', [`%${productName}%`], (error, results, fields) => {
+    if (error) throw error;
+    res.json(results);
+  });
+});
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
