@@ -47,15 +47,15 @@ font-semibold my-5">
               <div class="my-[10px] pl-[10px] min-h-[120px] font-serif">
                 <p class="font-light">{{ pr.name }}</p>
                 <div class="hidden xl:block md:space-x-2">
-                  <span class> {{ pr.sale }} .000đ</span>
-                  <del class="text-red-500"> {{ pr.price }}.000đ</del>
+                  <span class> {{ pr.sale|number }} .000đ</span>
+                  <del class="text-red-500"> {{ pr.price| number }}.000đ</del>
                 </div>
       
                 <div class="xl:hidden">
                   <p>
-                    <del class="text-red-500">{{ pr.price }}.000đ</del>
+                    <del class="text-red-500">{{ pr.price| number }}.000đ</del>
                   </p>
-                  <p>{{ pr.sale }} .000đ</p>
+                  <p>{{ pr.sale|number }} .000đ</p>
                 </div>
               </div>
               <div class="my-[10px] pr-[10px]">
@@ -74,7 +74,7 @@ font-semibold my-5">
                 ></a>
                 <button
                   class="btn text-white bg-red-600 glass hover:scale-[1.1] hover:text-red-600 hover:bg-white hover:border-solid hover:border-red-500 hover:border-[1px]"
-                >
+                (click)="addToCart(pr)"   >
                   <i class="fa fa-cart-shopping"></i>Giỏ Hàng
                 </button>
                 <a href="/">
@@ -91,3 +91,4 @@ font-semibold my-5">
         </div>
       </section>
 </div>
+

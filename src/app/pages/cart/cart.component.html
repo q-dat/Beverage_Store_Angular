@@ -1,0 +1,42 @@
+<section>
+  <!-- <h2>Giỏ Hàng Của Bạn</h2> -->
+  <h3 id="cartItem"></h3>
+  <div>
+    <div *ngFor="let item of cart; let i = index">
+      <table>
+        <tr>
+          <th>Sản Phẩm</th>
+          <th>Hình</th>
+          <th>Số Lượng</th>
+          <th>Giá</th>
+        </tr>
+        <tbody>
+          <tr>
+            <td>{{ item.name }}</td>
+            <td><img [src]="'../../../assets/products/' + item.img" alt="" width="100px" height="auto"></td>
+            <td>
+              <div>
+                <div>
+                  <button (click)="decrementCount(i)">-</button>
+                  <input type="text" name="Count" [(ngModel)]="item.count">
+                  <button (click)="incrementCount(i)">+</button>
+                </div>
+              </div>
+            </td>
+            <td>{{item.count * item.price | number}} đ</td>
+            <td><button (click)="removeItemFromCart(item)">xoá</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <h3>Thông Tin Đơn Hàng</h3>
+      <hr>
+      <p>Tổng Tiền:<span id="sum_cart">{{getTotalCost() | number}} đ</span></p>
+      <hr>
+      <p>Phí vận chuyển sẽ được tính ở trang thanh toán. Bạn cũng có thể nhập mã giảm giá ở trang thanh toán.</p>
+      <button><a href="/checkout">THANH TOÁN</a></button><br>
+      <p><a href="/shop"><i class="fa fa-reply"></i>Tiếp Tục Mua Hàng</a></p>
+    </div>
+  </div>
+</section>

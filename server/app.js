@@ -46,8 +46,26 @@ app.get('/sale', (req, res) => {
     res.json(results);
   });
 });
+// User
+app.post('/register', async (req, res) => {
+  const { username, email, address, password } = req.body;
+  if (!username || !email || !address || !password) {
+      // return res.status(400).send({ message: 'Tất cả các trường đều là bắt buộc' });
+  }
 
+  try {
+      const pool = await connectdb();
+      const connection = await pool.getConnection();
+      const query = 'INSERT INTO user (username, email, address, password) VALUES (?, ?, ?, ?)';
+      await connection.query(query, [username, email, address, password]);
+      connection.release();
+      res.status(201).send({ message: 'Người dùng đã được đăng ký' });
+  } catch (error) {
+      console.error('Lỗi truy vấn: ', error);
+      res.status(500).send({ error: 'Lỗi truy vấn' });
+  }
+});
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
-  console.log(`Server đang lắng nghe trên http://localhost:${port}`);
+  console.log(`--------------------------------------------------------------------http://localhost:${port}/products`);
 });

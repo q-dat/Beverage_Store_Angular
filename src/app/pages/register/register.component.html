@@ -1,0 +1,17 @@
+<div class="form_login">
+    <form (ngSubmit)="onSubmit()">
+      <h3>ĐĂNG KÝ</h3>
+      <label for="nameuser"><b>Họ Và Tên</b></label><br>
+      <input type="text" class="kw" placeholder="Họ Và Tên" id="nameuser" name="nameuser" [(ngModel)]="username">
+      <label for="email"><b>Email</b></label><br>
+      <input type="email" class="kw" placeholder="Email" id="email" name="email" [(ngModel)]="email">
+      <label for="address"><b>Địa Chỉ</b></label><br>
+      <input type="text" class="kw" placeholder="Địa Chỉ" id="address" name="address" [(ngModel)]="address">
+      <label for="pass"><b>Mật Khẩu</b></label><br>
+      <input type="password" class="kw" placeholder="Mật Khẩu" id="pass" name="password" [(ngModel)]="password"> <br><br>
+      <button type="submit" class="login"><b>Đăng Ký</b></button>
+      <p>{{ successMessage }}</p>
+      <p>{{ errorMessage }}</p>
+    </form>
+  </div>
+  
