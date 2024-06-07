@@ -1,17 +1,36 @@
-<div class="form_login">
-    <form (ngSubmit)="onSubmit()">
-      <h3>ĐĂNG KÝ</h3>
-      <label for="nameuser"><b>Họ Và Tên</b></label><br>
-      <input type="text" class="kw" placeholder="Họ Và Tên" id="nameuser" name="nameuser" [(ngModel)]="username">
-      <label for="email"><b>Email</b></label><br>
-      <input type="email" class="kw" placeholder="Email" id="email" name="email" [(ngModel)]="email">
-      <label for="address"><b>Địa Chỉ</b></label><br>
-      <input type="text" class="kw" placeholder="Địa Chỉ" id="address" name="address" [(ngModel)]="address">
-      <label for="pass"><b>Mật Khẩu</b></label><br>
-      <input type="password" class="kw" placeholder="Mật Khẩu" id="pass" name="password" [(ngModel)]="password"> <br><br>
-      <button type="submit" class="login"><b>Đăng Ký</b></button>
-      <p>{{ successMessage }}</p>
-      <p>{{ errorMessage }}</p>
-    </form>
-  </div>
-  
+<!-- ------------------------------------------------------------------------------------------------------- -->
+<div class="glass mb-10 lg:px-20 py-2 px-[10px] text-sm breadcrumbs">
+  <ul class="font-light">
+      <li><a href="/"><i class="fa-solid fa-house pr-2"></i>Trang Chủ</a></li>
+      <li><a href="/register"><i class="fa-solid fa-circle-info pr-2"></i>Đăng Ký</a></li>
+  </ul>
+</div>
+<!-- ------------------------------------------------------------------------------------------------------- -->
+<div class="form-login max-w-md mx-auto bg-main shadow-md rounded px-8 pt-6 pb-8 mb-4">
+  <form (ngSubmit)="onSubmit()" class="mb-4">
+    <h3 class="text-lg font-bold mb-4">ĐĂNG KÝ</h3>
+    <div class="mb-4">
+      <label for="nameuser" class="block text-gray-700 font-bold mb-2">Họ Và Tên</label>
+      <input type="text" class="kw appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Họ Và Tên" id="nameuser" name="nameuser" [(ngModel)]="username">
+    </div>
+    <div class="mb-4">
+      <label for="email" class="block text-gray-700 font-bold mb-2">Email</label>
+      <input type="email" class="kw appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Email" id="email" name="email" [(ngModel)]="email">
+    </div>
+    <div class="mb-4">
+      <label for="address" class="block text-gray-700 font-bold mb-2">Địa Chỉ</label>
+      <input type="text" class="kw appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Địa Chỉ" id="address" name="address" [(ngModel)]="address">
+    </div>
+    <div class="mb-6">
+      <label for="pass" class="block text-gray-700 font-bold mb-2">Mật Khẩu</label>
+      <input type="password" class="kw appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Mật Khẩu" id="pass" name="password" [(ngModel)]="password">
+    </div>
+    <div class="flex items-center justify-between">
+      <button type="submit" class="login bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+        Đăng Ký
+      </button>
+      <p class="text-sm text-gray-600 mt-2">{{ successMessage }}</p>
+      <p class="text-sm text-red-600 mt-2">{{ errorMessage }}</p>
+    </div>
+  </form>
+</div>

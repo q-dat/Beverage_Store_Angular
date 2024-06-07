@@ -25,7 +25,8 @@ export class LoginComponent {
       if (response) {
         // Đăng nhập thành công
         localStorage.setItem('token', response.token);
-        this.router.navigate(['/']); // Chuyển hướng đến trang chính sau khi đăng nhập thành công
+        this.router.navigate(['/']);
+
       } else {
         alert('Email hoặc mật khẩu không đúng');
       }

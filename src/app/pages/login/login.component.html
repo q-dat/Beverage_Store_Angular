@@ -6,16 +6,18 @@
     </ul>
 </div>
 <!-- ------------------------------------------------------------------------------------------------------- -->
-<div class="form_login">
-    <form action="" name="myF">
-      <h3>ĐĂNG NHẬP</h3>
-      <label for="email"><b>Email</b></label><br>
-      <input type="email" class="kw" [(ngModel)]="email" placeholder="Email" id="email" name="email">
-      <label for="pass"><b>Password</b></label><br>
-      <input type="password" class="kw" [(ngModel)]="password" placeholder="Password" id="pass" name="password"><br><br>
-      <input type="checkbox" class="look" (click)="lookpass()"><b>Hiện Thị Mật Khẩu </b><br>
-      <button type="button" class="login" (click)="check()"><b>Đăng Nhập</b></button>
-      <button type="button" class="login"><a href="/register"><b>Đăng Ký</b></a></button>
-    </form>
-  </div>
-  
+<div class="form-login bg-main p-8 rounded-lg shadow-md max-w-md mx-auto px-8 pt-6 pb-8 mb-4">
+  <form action="">
+    <h3 class="text-2xl font-semibold mb-4">ĐĂNG NHẬP</h3>
+    <label for="email" class="block mb-2"><b>Email</b></label>
+    <input type="email" class="input-field mb-4 w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500" [(ngModel)]="email" placeholder="Email" id="email" name="email">
+    <label for="pass" class="block mb-2"><b>Password</b></label>
+    <input type="password" class="input-field mb-4 w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500" [(ngModel)]="password" placeholder="Password" id="pass" name="password">
+    <input type="checkbox" class="mr-2" (click)="lookpass()">
+    <label class="text-sm"><b>Hiện Thị Mật Khẩu</b></label><br>
+    <button type="button" class="btn-login bg-indigo-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-indigo-600" (click)="check()">Đăng Nhập</button>
+    <button type="button" class="btn-register text-indigo-500 font-semibold py-2 px-4 rounded-lg border border-indigo-500 hover:bg-indigo-100">
+      <a href="/register"><b>Đăng Ký</b></a>
+    </button>
+  </form>
+</div>
