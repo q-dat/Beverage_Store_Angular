@@ -15,6 +15,7 @@ export class HeaderComponent {
   constructor(private authService: AuthService, private router: Router) {
     if (this.authService.isLoggedIn()) {
       this.username = this.authService.getUserName() ?? '';
+
     }
   }
 
