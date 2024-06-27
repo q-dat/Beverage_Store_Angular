@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
-import { Products } from '../../common/product';
+import { Products } from '../../types/product';
 import { Router, RouterModule } from '@angular/router';
 import { CartService } from '../../service/cart.service';
 @Component({

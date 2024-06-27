@@ -1,5 +1,5 @@
 import { Component, OnInit, inject } from '@angular/core';
-import { Products } from '../../common/product';
+import { Products } from '../../types/product';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute } from '@angular/router';
 import { CommonModule } from '@angular/common';
